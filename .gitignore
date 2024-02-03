@@ -9,6 +9,6 @@ bin/
 .classpath
 .project
 .vscode/
-.target/
+target/
 # Raraph84
 deploy.bat
