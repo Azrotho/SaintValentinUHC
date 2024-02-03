@@ -1,0 +1,14 @@
+# IntelliJ
+.idea/
+.metadata/
+*.iml
+
+# Eclipse
+.settings/
+bin/
+.classpath
+.project
+.vscode/
+.target/
+# Raraph84
+deploy.bat
