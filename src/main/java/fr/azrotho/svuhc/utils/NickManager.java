@@ -43,6 +43,7 @@ public class NickManager implements Listener {
         });
 
         ProtocolLibrary.getProtocolManager().addPacketListener(new PacketAdapter(SVUhc.getInstance(), PacketType.Play.Server.PLAYER_INFO) {
+            @SuppressWarnings("null")
             @Override
             public void onPacketSending(PacketEvent event) {
                 List<PlayerInfoData> dataList = event.getPacket().getPlayerInfoDataLists().read(0);
