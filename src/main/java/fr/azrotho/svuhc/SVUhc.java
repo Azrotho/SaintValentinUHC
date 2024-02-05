@@ -16,6 +16,7 @@ public class SVUhc extends JavaPlugin {
     public void onEnable() {
         INSTANCE = this;
         getCommand("team").setExecutor(new TeamCommand());
+        
     }
 
     @Override

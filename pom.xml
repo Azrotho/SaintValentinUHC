@@ -40,6 +40,10 @@
         <id>iridiumdevelopment</id>
         <url>https://nexus.iridiumdevelopment.net/repository/maven-releases/</url>
       </repository>
+    <repository>
+      <id>dmulloy2-repo</id>
+      <url>https://repo.dmulloy2.net/repository/public/</url>
+    </repository>
    </repositories>
     <dependencies>
        <dependency>
@@ -54,11 +58,9 @@
          <version>LATEST</version>
     </dependency>
     <dependency>
-      <groupId>xyz.haoshoku</groupId>
-      <artifactId>nick</artifactId>
-      <version>1v6.5.3</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/libs/NickAPI-v6.5.3.jar</systemPath>
-</dependency>
+    <groupId>com.comphenix.protocol</groupId>
+    <artifactId>ProtocolLib</artifactId>
+    <version>4.8.0</version>
+  </dependency>
    </dependencies>
 </project>

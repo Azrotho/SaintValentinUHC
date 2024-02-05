@@ -1,6 +1,7 @@
 name: SVUHC
 version: 1.0
 main: fr.azrotho.svuhc.SVUhc
+author: Azrotho
 commands:
   team:
     description: "Admin Command: Manage teams"
