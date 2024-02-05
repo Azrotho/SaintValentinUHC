@@ -53,5 +53,12 @@
          <artifactId>IridiumColorAPI</artifactId>
          <version>LATEST</version>
     </dependency>
+    <dependency>
+      <groupId>xyz.haoshoku</groupId>
+      <artifactId>nick</artifactId>
+      <version>1v6.5.3</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/libs/NickAPI-v6.5.3.jar</systemPath>
+</dependency>
    </dependencies>
 </project>
