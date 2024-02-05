@@ -14,6 +14,7 @@ public class SVUhc extends JavaPlugin {
     @Override
     public void onEnable() {
         INSTANCE = this;
+        // TODO: Register commands
     }
 
     @Override

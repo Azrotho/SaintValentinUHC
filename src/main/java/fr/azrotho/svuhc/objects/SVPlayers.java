@@ -13,8 +13,17 @@ public class SVPlayers {
     }
 
     public void addPlayer(Player player) {
-        if(!players.contains(player)) {
+        if(containsPlayer(player)) {
             players.add(new SVPlayer(player));
         }
+    }
+
+    public Boolean containsPlayer(Player player) {
+        for(SVPlayer svPlayer : players) {
+            if(svPlayer.getUuid().equals(player.getUniqueId())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
