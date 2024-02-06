@@ -24,7 +24,7 @@ public class NickCommand implements CommandExecutor {
                         commandSender.sendMessage(SVUhc.getInstance().getTag() + "§cUsage: /nick global <player> <nickname>");
                         return true;
                     }
-                    //SVUhc.getInstance().getNickManager().nick(player, args[2]);
+                    SVUhc.getInstance().getNameChanger().renamePlayer(player, args[2]);
                     return true;
                 }
 
