@@ -1,8 +1,5 @@
 package fr.azrotho.svuhc.utils;
 
-// Importer les classes nécessaires
-import java.util.Collections;
-
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
@@ -12,7 +9,6 @@ import com.comphenix.protocol.ProtocolManager;
 import com.comphenix.protocol.events.PacketContainer;
 import com.comphenix.protocol.wrappers.WrappedGameProfile;
 import com.comphenix.protocol.wrappers.EnumWrappers;
-import com.comphenix.protocol.wrappers.PlayerInfoData;
 import com.comphenix.protocol.wrappers.WrappedDataWatcher;
 
 // Définir la classe PlayerNameChanger qui hérite de JavaPlugin
@@ -34,12 +30,11 @@ public class PlayerNameChanger {
         WrappedGameProfile newProfile = new WrappedGameProfile(player.getUniqueId(), newName);
 
         // Créer un paquet pour mettre à jour le nom du joueur dans la liste des joueurs
-        PacketContainer playerInfoPacket = protocolManager.createPacket(PacketType.Play.Server.PLAYER_INFO);
         // Définir les champs du paquet
 
         //TODO: Fix this
-        playerInfoPacket.getPlayerInfoAction().write(0, EnumWrappers.PlayerInfoAction.UPDATE_DISPLAY_NAME);
-        playerInfoPacket.getPlayerInfoDataLists().write(0, Collections.singletonList(new PlayerInfoData(newProfile, 0, EnumWrappers.NativeGameMode.NOT_SET, null)));
+        PacketContainer packet = new PacketContainer(PacketType.Play.Server.PLAYER_INFO);
+        packet.getPlayerInfoAction().write(0, EnumWrappers.PlayerInfoAction.UPDATE_DISPLAY_NAME);
 
         // Créer un paquet pour mettre à jour le nom du joueur au-dessus de sa tête
         PacketContainer entityDestroyPacket = protocolManager.createPacket(PacketType.Play.Server.ENTITY_DESTROY);
@@ -60,7 +55,7 @@ public class PlayerNameChanger {
         // Envoyer les paquets à tous les joueurs en ligne
         for (Player online : Bukkit.getServer().getOnlinePlayers()) {
             try {
-                protocolManager.sendServerPacket(online, playerInfoPacket);
+                protocolManager.sendServerPacket(online, packet);
                 protocolManager.sendServerPacket(online, entityDestroyPacket);
                 protocolManager.sendServerPacket(online, namedEntitySpawnPacket);
             } catch (Exception e) {
