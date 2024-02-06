@@ -7,6 +7,3 @@ commands:
   team:
     description: "Admin Command: Manage teams"
     usage: "/team <args>"
-  nick:
-    description: "Admin Command: Manage nicknames"
-    usage: "/nick <args>"
