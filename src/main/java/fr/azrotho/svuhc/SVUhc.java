@@ -17,6 +17,7 @@ public class SVUhc extends JavaPlugin {
     private static SVUhc INSTANCE;
     private SVPlayers players;
     private String tag;
+    private Boolean isStarted = false;
 
     @Override
     public void onEnable() {
@@ -50,5 +51,13 @@ public class SVUhc extends JavaPlugin {
 
     public String getTag() {
         return this.tag;
+    }
+
+    public Boolean isStarted() {
+        return this.isStarted;
+    }
+
+    public void setStarted(Boolean isStarted) {
+        this.isStarted = isStarted;
     }
 }
