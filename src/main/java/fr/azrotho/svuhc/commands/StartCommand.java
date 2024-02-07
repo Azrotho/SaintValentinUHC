@@ -27,6 +27,9 @@ public class StartCommand implements CommandExecutor {
             
             p.getInventory().clear();
             p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 10 * 20 * 60, 20, true));
+            p.setHealth(20);
+            p.setFoodLevel(20);
+            p.setSaturation(20);
 
             // Téléportation Aléatoire
 
