@@ -95,6 +95,7 @@ public class SVPlayers {
 
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fVous êtes meilleur/e ami/e, votre objectif est de pécho §d§l" + fillePlayer.getName());
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fTant que vous n'êtes pas avec elle, vous aurez slowness 1 et 8 coeurs seulement.");
+                garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fLorsque votre meilleure amie sera en mode bebou sur quelqu'un, vous receverez une boussole pointant vers son bebou.");
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fVous devez éliminer son amoureux afin de la récupérer, à moins de 50 blocs de lui, vous aurez speed 1, force 1 et 2 coeurs supplémentaires");
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fSi vous arrivez à l'éliminer, vous garderez vos pouvoirs et récupérez §d§l" + fillePlayer.getName() + " §fet repartirez tous les deux au stade de kiff.");
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fVous ne pouvez vous mettre en couple qu'avec §d§l" + fillePlayer.getName() +"§f, si celle-ci finis mariée, vous mourrirez instantanément.");
