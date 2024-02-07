@@ -99,13 +99,7 @@ public class SVPlayers {
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fSi vous arrivez à l'éliminer, vous garderez vos pouvoirs et récupérez §d§l" + fillePlayer.getName() + " §fet repartirez tous les deux au stade de kiff.");
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fVous ne pouvez vous mettre en couple qu'avec §d§l" + fillePlayer.getName() +"§f, si celle-ci finis mariée, vous mourrirez instantanément.");
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fSi votre meilleure amie vous mets un rateau, vous mourrirez instantanément");
-
-                fillePlayer.sendMessage(SVUhc.getInstance().getTag() + "§fVous êtes meilleur/e ami/e, votre objectif est de pécho §d§l" + garconPlayer.getName());
-                fillePlayer.sendMessage(SVUhc.getInstance().getTag() + "§fTant que vous n'êtes pas avec lui, vous aurez slowness 1 et 8 coeurs seulement.");
-                fillePlayer.sendMessage(SVUhc.getInstance().getTag() + "§fVous devez éliminer son amoureux afin de le récupérer, à moins de 50 blocs de lui, vous aurez speed 1, force 1 et 2 coeurs supplémentaires");
-                fillePlayer.sendMessage(SVUhc.getInstance().getTag() + "§fSi vous arrivez à l'éliminer, vous garderez vos pouvoirs et récupérez §d§l" + garconPlayer.getName() + " §fet repartirez tous les deux au stade de kiff.");
-                fillePlayer.sendMessage(SVUhc.getInstance().getTag() + "§fVous ne pouvez vous mettre en couple qu'avec §d§l" + garconPlayer.getName() +"§f, si celui-ci finis marié, vous mourrirez instantanément.");
-                fillePlayer.sendMessage(SVUhc.getInstance().getTag() + "§fSi votre meilleur ami vous mets un rateau, vous mourrirez instantanément");
+                
             } else {
                 designeMeilleurAmi();
             }
