@@ -73,7 +73,7 @@ public class SVPlayers {
         return player.getRelation(Bukkit.getPlayer(target.getUuid())).equals(relation);
     }
 
-    public void designMeilleurAmi() {
+    public void designeMeilleurAmi() {
         // Désigne aléatoirement 2 Joueurs qui sont 1 garçon et 1 fille et les mets en relation "meilleur_ami", vérifier que les 2 joueurs ne sont pas déjà en relation
         List<SVPlayer> garcons = new ArrayList<>();
         List<SVPlayer> filles = new ArrayList<>();
@@ -92,6 +92,7 @@ public class SVPlayers {
                 fille.addRelation(Bukkit.getPlayer(garcon.getUuid()), "meilleur_ami");
                 Player garconPlayer = Bukkit.getPlayer(garcon.getUuid());
                 Player fillePlayer = Bukkit.getPlayer(fille.getUuid());
+
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fVous êtes meilleur/e ami/e, votre objectif est de pécho §d§l" + fillePlayer.getName());
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fTant que vous n'êtes pas avec elle, vous aurez slowness 1 et 8 coeurs seulement.");
                 garconPlayer.sendMessage(SVUhc.getInstance().getTag() + "§fVous devez éliminer son amoureux afin de la récupérer, à moins de 50 blocs de lui, vous aurez speed 1, force 1 et 2 coeurs supplémentaires");
@@ -106,7 +107,7 @@ public class SVPlayers {
                 fillePlayer.sendMessage(SVUhc.getInstance().getTag() + "§fVous ne pouvez vous mettre en couple qu'avec §d§l" + garconPlayer.getName() +"§f, si celui-ci finis marié, vous mourrirez instantanément.");
                 fillePlayer.sendMessage(SVUhc.getInstance().getTag() + "§fSi votre meilleur ami vous mets un rateau, vous mourrirez instantanément");
             } else {
-                designMeilleurAmi();
+                designeMeilleurAmi();
             }
         }
     }
