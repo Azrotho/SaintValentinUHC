@@ -21,6 +21,7 @@ public class StartCommand implements CommandExecutor {
             return true;
         }
         SVUhc.getInstance().setStarted(true);
+        SVUhc.getInstance().players().designeMeilleurAmi();
 
         for (Player p : Bukkit.getServer().getOnlinePlayers()) {
             
