@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.iridium.iridiumcolorapi.IridiumColorAPI;
 
 import fr.azrotho.svuhc.commands.TeamCommand;
+import fr.azrotho.svuhc.listeners.OnJoin;
 import fr.azrotho.svuhc.objects.SVPlayers;
 
 public class SVUhc extends JavaPlugin {
@@ -17,6 +18,8 @@ public class SVUhc extends JavaPlugin {
         INSTANCE = this;
         getCommand("team").setExecutor(new TeamCommand());
         this.players = new SVPlayers();
+
+        getServer().getPluginManager().registerEvents(new OnJoin(), this);
     }
 
     @Override
