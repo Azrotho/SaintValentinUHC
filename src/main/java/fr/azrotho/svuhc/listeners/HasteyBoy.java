@@ -9,7 +9,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class HasteyBoy implements Listener {
-    
+
     @SuppressWarnings("incomplete-switch")
     @EventHandler
     public void Hastey(PrepareItemCraftEvent e) {
@@ -53,6 +53,7 @@ public class HasteyBoy implements Listener {
         ItemMeta PJt1M;
         ItemStack VhJt1;
         ItemMeta VhJt1M;
+        if(e.getInventory().getResult() == null) return;
         Material itemType = e.getInventory().getResult().getType();
         switch (itemType) {
             case WOODEN_PICKAXE -> {
