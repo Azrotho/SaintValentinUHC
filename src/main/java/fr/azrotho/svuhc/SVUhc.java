@@ -11,7 +11,7 @@ import fr.azrotho.svuhc.objects.SVPlayers;
 public class SVUhc extends JavaPlugin {
     private static SVUhc INSTANCE;
     private SVPlayers players;
-    private String tag = "§f§l[" + IridiumColorAPI.process("<GRADIENT:FF00EF>§lSaint-Valentin UHC</GRADIENT:5B00FF>") + "§f§l] §e§l➤ ";
+    private String tag;
 
     @Override
     public void onEnable() {
@@ -20,6 +20,8 @@ public class SVUhc extends JavaPlugin {
         this.players = new SVPlayers();
 
         getServer().getPluginManager().registerEvents(new OnJoin(), this);
+
+        tag = "§f§l[" + IridiumColorAPI.process("<GRADIENT:FF00EF>§lSaint-Valentin UHC</GRADIENT:5B00FF>") + "§f§l] §e§l➤ ";
     }
 
     @Override

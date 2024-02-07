@@ -22,13 +22,18 @@ public class TeamCommand implements CommandExecutor {
                     commandSender.sendMessage(SVUhc.getInstance().getTag() + "§cErreur: /team setTeam <player> <team>");
                     return true;
                 }
+                if(args[2].equalsIgnoreCase("garcon") || args[2].equalsIgnoreCase("fille")) {
+                    commandSender.sendMessage(SVUhc.getInstance().getTag() + "§cErreur: La team doit être soit garcon soit fille.");
+                    return true;
+                }
 
-                SVPlayer player = SVUhc.getInstance().players().getPlayer(Bukkit.getPlayer(args[1]));
+                Player player = Bukkit.getPlayer(args[1]);
                 if(player == null) {
                     commandSender.sendMessage(SVUhc.getInstance().getTag() + "§cErreur: Le joueur n'existe pas.");
                     return true;
                 }
-                player.setTeam(args[2]);
+                SVPlayer sVPlayer = SVUhc.getInstance().players().getPlayer(player);
+                sVPlayer.setTeam(args[2].toLowerCase());
                 break;
             case "getPlayerTeams":
                 // Possibilité de voir la team de tous les joueurs

@@ -7,3 +7,6 @@ commands:
   team:
     description: "Admin Command: Manage teams"
     usage: "/team <args>"
+  start:
+    description: "Admin Command: Start the game"
+    usage: "/start"

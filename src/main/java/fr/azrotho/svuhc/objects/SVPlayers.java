@@ -16,7 +16,7 @@ public class SVPlayers {
     }
 
     public void addPlayer(Player player) {
-        if(containsPlayer(player)) {
+        if(!containsPlayer(player)) {
             players.add(new SVPlayer(player));
         }
     }

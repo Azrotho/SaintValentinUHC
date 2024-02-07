@@ -9,15 +9,17 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>svuhc</name>
+
+  
   <!-- FIXME change it to the project's website -->
   <build>
-           <resources>
-            <resource>
-                <targetPath>.</targetPath>
-                <filtering>true</filtering>
-                <directory>src/main/resources</directory>
-            </resource>
-        </resources>
+    <resources>
+      <resource>
+          <targetPath>.</targetPath>
+          <filtering>true</filtering>
+          <directory>src/main/resources</directory>
+      </resource>
+    </resources>
     <pluginManagement>
       <plugins>
         <plugin>
