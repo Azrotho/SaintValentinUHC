@@ -1,12 +1,15 @@
 package fr.azrotho.svuhc;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.iridium.iridiumcolorapi.IridiumColorAPI;
 
 import fr.azrotho.svuhc.commands.TeamCommand;
+import fr.azrotho.svuhc.listeners.FastSmelting;
 import fr.azrotho.svuhc.listeners.OnJoin;
 import fr.azrotho.svuhc.objects.SVPlayers;
+import fr.azrotho.svuhc.runnable.CatEyesRunnable;
 
 public class SVUhc extends JavaPlugin {
     private static SVUhc INSTANCE;
@@ -19,9 +22,12 @@ public class SVUhc extends JavaPlugin {
         getCommand("team").setExecutor(new TeamCommand());
         this.players = new SVPlayers();
 
-        getServer().getPluginManager().registerEvents(new OnJoin(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new OnJoin(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new FastSmelting(), this);
 
         tag = "§f§l[" + IridiumColorAPI.process("<GRADIENT:FF00EF>§lSaint-Valentin UHC</GRADIENT:5B00FF>") + "§f§l] §e§l➤ ";
+        CatEyesRunnable catEyesRunnable = new CatEyesRunnable();
+        catEyesRunnable.runTaskTimer(this, 0, 0);
     }
 
     @Override
