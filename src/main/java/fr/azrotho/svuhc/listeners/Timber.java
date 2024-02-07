@@ -4,6 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +12,12 @@ import java.util.List;
 public class Timber implements Listener {
 
     @EventHandler
-    public void onBlockBreak(BlockBreakEvent e) {
-        if (!e.getBlock().getType().name().contains("LOG")) return;
+    public void onBlockBreak(BlockBreakEvent event) {
+        if (!event.getBlock().getType().name().contains("LOG")) return;
 
-        if(e.getBlock().getType().name().contains("LOG")) {
+        if(event.getBlock().getType().name().contains("LOG")) {
             List<Location> logs = new ArrayList<>();
-            logs.add(e.getBlock().getLocation());
+            logs.add(event.getBlock().getLocation());
             int i = 0;
             while(i < logs.size()) {
                 Location loc = logs.get(i);
@@ -33,7 +34,9 @@ public class Timber implements Listener {
                 i++;
             }
             for (Location loc : logs) {
-                loc.getBlock().breakNaturally(e.getPlayer().getInventory().getItemInMainHand());
+                loc.getBlock().breakNaturally(event.getPlayer().getInventory().getItemInMainHand());
+                ItemStack item = event.getPlayer().getInventory().getItemInMainHand();
+                item.damage(1, event.getPlayer());
             }
         }
     }
