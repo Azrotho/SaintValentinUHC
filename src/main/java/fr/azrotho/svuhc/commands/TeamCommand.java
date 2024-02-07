@@ -1,11 +1,14 @@
 package fr.azrotho.svuhc.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import fr.azrotho.svuhc.SVUhc;
+import fr.azrotho.svuhc.objects.SVPlayer;
 
 public class TeamCommand implements CommandExecutor {
 
@@ -16,11 +19,23 @@ public class TeamCommand implements CommandExecutor {
             case "setTeam":
                 // Possibilité de set la team d'un joueur uniquement sur garcon/fille
                 if(args.length < 3) {
-                    commandSender.sendMessage("§cErreur: /team setTeam <player> <team>");
+                    commandSender.sendMessage(SVUhc.getInstance().getTag() + "§cErreur: /team setTeam <player> <team>");
                     return true;
                 }
+
+                SVPlayer player = SVUhc.getInstance().players().getPlayer(Bukkit.getPlayer(args[1]));
+                if(player == null) {
+                    commandSender.sendMessage(SVUhc.getInstance().getTag() + "§cErreur: Le joueur n'existe pas.");
+                    return true;
+                }
+                player.setTeam(args[2]);
                 break;
             case "getPlayerTeams":
+                // Possibilité de voir la team de tous les joueurs
+                for(SVPlayer svPlayer : SVUhc.getInstance().players().players) {
+                    Player player1 = Bukkit.getPlayer(svPlayer.getUuid());
+                    commandSender.sendMessage(player1.getName() + " : " + svPlayer.getTeam());
+                }
                 break;    
         }
         return true;
