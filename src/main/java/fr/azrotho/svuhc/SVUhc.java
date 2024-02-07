@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.iridium.iridiumcolorapi.IridiumColorAPI;
 
+import fr.azrotho.svuhc.commands.StartCommand;
 import fr.azrotho.svuhc.commands.TeamCommand;
 import fr.azrotho.svuhc.listeners.FastSmelting;
 import fr.azrotho.svuhc.listeners.HasteyBoy;
@@ -23,6 +24,7 @@ public class SVUhc extends JavaPlugin {
     public void onEnable() {
         INSTANCE = this;
         getCommand("team").setExecutor(new TeamCommand());
+        getCommand("start").setExecutor(new StartCommand());
         this.players = new SVPlayers();
 
         Bukkit.getServer().getPluginManager().registerEvents(new OnJoin(), this);
