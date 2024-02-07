@@ -1,5 +1,6 @@
 package fr.azrotho.svuhc.objects;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import java.util.UUID;
@@ -38,10 +39,19 @@ public class SVPlayer {
     }
 
     public String getRelation(Player player) {
+        if(!this.relations.containsKey(player)) return "None";
         return this.relations.get(player);
     }
 
     public boolean hasRelation(Player player) {
         return this.relations.containsKey(player);
+    }
+
+    public boolean hasRelation(Player player, String relation) {
+        return this.relations.containsKey(player) && this.relations.get(player).equals(relation);
+    }
+
+    public boolean hasRelation(SVPlayer player, String relation) {
+        return this.relations.containsKey(Bukkit.getPlayer(player.getUuid())) && this.relations.get(Bukkit.getPlayer(player.getUuid())).equals(relation);
     }
 }

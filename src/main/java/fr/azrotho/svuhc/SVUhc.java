@@ -10,7 +10,7 @@ import fr.azrotho.svuhc.objects.SVPlayers;
 public class SVUhc extends JavaPlugin {
     private static SVUhc INSTANCE;
     private SVPlayers players;
-    private String tag = "§f§l[" + IridiumColorAPI.process("<GRADIENT:2C08BA>§lSaint-Valentin UHC</GRADIENT:028A97>") + "§f§l] §e§l➤ ";
+    private String tag = "§f§l[" + IridiumColorAPI.process("<GRADIENT:FF00EF>§lSaint-Valentin UHC</GRADIENT:5B00FF>") + "§f§l] §e§l➤ ";
 
     @Override
     public void onEnable() {
