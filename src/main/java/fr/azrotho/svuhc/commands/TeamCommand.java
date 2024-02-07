@@ -22,7 +22,7 @@ public class TeamCommand implements CommandExecutor {
                     commandSender.sendMessage(SVUhc.getInstance().getTag() + "§cErreur: /team setTeam <player> <team>");
                     return true;
                 }
-                if(args[2].equalsIgnoreCase("garcon") || args[2].equalsIgnoreCase("fille")) {
+                if(!args[2].equalsIgnoreCase("garcon") && !args[2].equalsIgnoreCase("fille")) {
                     commandSender.sendMessage(SVUhc.getInstance().getTag() + "§cErreur: La team doit être soit garcon soit fille.");
                     return true;
                 }
