@@ -29,20 +29,16 @@ public class StartCommand implements CommandExecutor {
 
             // Téléportation Aléatoire
 
-
             Location location = new Location(p.getWorld(), 0, 0, 0);
 
-            location.setX(Math.random() * 200 * 2 - 200);
-            location.setZ(Math.random() * 200 * 2 - 200);
+            location.setX(Math.random() * 500 * 2 - 500);
+            location.setZ(Math.random() * 500 * 2 - 500);
             location.setY(p.getWorld().getHighestBlockAt(location.getBlockX(), location.getBlockZ()).getY());
 
             p.teleport(location);
             ItemStack gapple = new ItemStack(Material.GOLDEN_APPLE, 8);
             p.getInventory().addItem(gapple);
             p.setGameMode(GameMode.SURVIVAL);
-
-
-
         }
 
         for(World w : Bukkit.getWorlds()){
