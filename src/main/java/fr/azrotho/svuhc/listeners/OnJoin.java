@@ -14,7 +14,7 @@ public class OnJoin implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         SVUhc.getInstance().players().addPlayer(event.getPlayer());
-        if(event.getPlayer().hasPlayedBefore()) event.getPlayer().sendMessage(SVUhc.getInstance().getTag() + "§cBienvenue sur le Serveur !");
+        if(!event.getPlayer().hasPlayedBefore()) event.getPlayer().sendMessage(SVUhc.getInstance().getTag() + "§cBienvenue sur le Serveur !");
         Player player = event.getPlayer();
         if(!SVUhc.getInstance().isStarted()) {
             player.teleport(new org.bukkit.Location(Bukkit.getWorld("world"), 0, 196, 0));
