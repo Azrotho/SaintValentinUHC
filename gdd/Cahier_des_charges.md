@@ -1,7 +1,7 @@
-Tout comme le SABOTEUR -> Stuff de départ : 16 steacks, 8 pommes d'or, bouclier UPDATE du coup (pve 100% pvp off),
- Mêmes scéarios, même difficulté/spawn de mobs ! 
+~~Tout comme le SABOTEUR -> Stuff de départ : 16 steacks, 8 pommes d'or, bouclier UPDATE du coup (pve 100% pvp off),
+ Mêmes scéarios, même difficulté/spawn de mobs !~~
 
-Au spawn : 
+~~Au spawn : 
 1 meilleur ami et 1 meilleure amie recevront le message : 
 "Vous êtes meilleur/e ami/e, votre objectif est de pecho *PSEUDO EN ROSE*.
 Tant que vous n'êtes pas avec elle, vous aurez slowness 1 et 8 coeurs seulement.
@@ -11,13 +11,13 @@ Vous devez éliminer son amoureux afin de la récupérer, à moins de 50 blocs d
 supplémentaires.
 Si vous arrivez à l'éliminer, vous garderez vos pouvoirs et récupérez *PSEUDO EN ROSE* et repartirez tous les deux au stade de kiff.
 Vous ne pouvez vous mettre en couple qu'avec *PSEUDO EN ROSE*, si celle-ci finis mariée, vous mourrirez instantanément.
-Si votre meilleure amie vous mets un rateau, vous mourrirez instantanément"
+Si votre meilleure amie vous mets un rateau, vous mourrirez instantanément"~~
 
 
 
-début du couple -> clic droit / item spécial idk u'u
+début du couple ~~-> clic droit / item spécial idk u'u
 Vous êtes en date avec *PSEUDO EN ROSE* que voulez-vous faire ? 
-***CLICABLE*** Je suis en kiff sur elle.  ***CLICABLE*** Je souhaite lui mettre un rateau.
+***CLICABLE*** Je suis en kiff sur elle.  ***CLICABLE*** Je souhaite lui mettre un rateau. -->~~ __**COMMANDE /couple utilisable seulement à 20 blocks**__
 
 Si elle mets un rateau, elle gagne un coeur définitif et il en perds un définitif.
 *La vie est parfois parcemée d'embuche, en effet l'heure est au chagrin d'amour puisque *PSEUDO EN ROSE* vous à mis un râteau,
