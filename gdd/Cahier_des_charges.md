@@ -1,20 +1,6 @@
 ~~Tout comme le SABOTEUR -> Stuff de départ : 16 steacks, 8 pommes d'or, bouclier UPDATE du coup (pve 100% pvp off),
  Mêmes scéarios, même difficulté/spawn de mobs !~~
 
-~~Au spawn : 
-1 meilleur ami et 1 meilleure amie recevront le message : 
-"Vous êtes meilleur/e ami/e, votre objectif est de pecho *PSEUDO EN ROSE*.
-Tant que vous n'êtes pas avec elle, vous aurez slowness 1 et 8 coeurs seulement.
-Quand votre meilleure amie sera en kiff sur quelqu'un, vous recevrez un message.
-Lorsque votre meilleure amie sera en mode bebou sur quelqu'un, vous receverez une boussole pointant vers son bebou.
-Vous devez éliminer son amoureux afin de la récupérer, à moins de 50 blocs de lui, vous aurez speed 1, force 1 et 2 coeurs
-supplémentaires.
-Si vous arrivez à l'éliminer, vous garderez vos pouvoirs et récupérez *PSEUDO EN ROSE* et repartirez tous les deux au stade de kiff.
-Vous ne pouvez vous mettre en couple qu'avec *PSEUDO EN ROSE*, si celle-ci finis mariée, vous mourrirez instantanément.
-Si votre meilleure amie vous mets un rateau, vous mourrirez instantanément"~~
-
-
-
 début du couple ~~-> clic droit / item spécial idk u'u
 Vous êtes en date avec *PSEUDO EN ROSE* que voulez-vous faire ? 
 ***CLICABLE*** Je suis en kiff sur elle.  ***CLICABLE*** Je souhaite lui mettre un rateau. -->~~ __**COMMANDE /couple utilisable seulement à 20 blocks**__
@@ -96,8 +82,3 @@ Si en couldown (25 minutes) -> Elle ne semble pas vouloir de votre mignonnerie, 
 Si non mariés -> Vous devez avoir un labrador, deux gosses, une femme et un scénic rouge pour faire du caliente caliente.
 Si mariés -> Grrrr, ça zook sous la couette, vous vous êtes envoyé en l'air, vous avez donc l'effet jump boost 4 et speed 2 pendant 2 minutes.
 Si en couldown -> Elle te fais le coup de la panne...Réessaye dans *TEMPS*.
-
- 
-
-
-
