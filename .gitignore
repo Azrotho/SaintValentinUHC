@@ -12,3 +12,4 @@ bin/
 target/
 # Raraph84
 deploy.bat
+*.log
