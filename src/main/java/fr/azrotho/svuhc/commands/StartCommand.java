@@ -40,8 +40,13 @@ public class StartCommand implements CommandExecutor {
             location.setY(p.getWorld().getHighestBlockAt(location.getBlockX(), location.getBlockZ()).getY());
 
             p.teleport(location);
+
             ItemStack gapple = new ItemStack(Material.GOLDEN_APPLE, 8);
             p.getInventory().addItem(gapple);
+
+            ItemStack steak = new ItemStack(Material.COOKED_BEEF, 16);
+            p.getInventory().addItem(steak);
+
             p.setGameMode(GameMode.SURVIVAL);
         }
 

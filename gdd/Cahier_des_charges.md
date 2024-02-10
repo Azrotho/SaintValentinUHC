@@ -1,9 +1,4 @@
-~~Tout comme le SABOTEUR -> Stuff de départ : 16 steacks, 8 pommes d'or, bouclier UPDATE du coup (pve 100% pvp off),
- Mêmes scéarios, même difficulté/spawn de mobs !~~
-
-début du couple ~~-> clic droit / item spécial idk u'u
-Vous êtes en date avec *PSEUDO EN ROSE* que voulez-vous faire ? 
-***CLICABLE*** Je suis en kiff sur elle.  ***CLICABLE*** Je souhaite lui mettre un rateau. -->~~ __**COMMANDE /couple utilisable seulement à 20 blocks**__
+__**COMMANDE /couple utilisable seulement à 20 blocks**__
 
 Si elle mets un rateau, elle gagne un coeur définitif et il en perds un définitif.
 *La vie est parfois parcemée d'embuche, en effet l'heure est au chagrin d'amour puisque *PSEUDO EN ROSE* vous à mis un râteau,
