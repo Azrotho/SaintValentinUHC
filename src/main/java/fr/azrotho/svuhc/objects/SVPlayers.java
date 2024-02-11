@@ -211,4 +211,12 @@ public class SVPlayers {
         }
     }
 
+    public List<SVCouple> getCouples() {
+        return couples;
+    }
+
+    public void addTimeToCouple(SVCouple couple) {
+        couple.setTime(couple.getTime() + 1);
+    }
+
 }
