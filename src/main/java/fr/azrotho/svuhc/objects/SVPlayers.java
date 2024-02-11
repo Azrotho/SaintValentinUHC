@@ -135,6 +135,34 @@ public class SVPlayers {
         }
     }
 
+    public boolean isLaMeilleureAmiFille(Player player) {
+        for(SVPlayer svPlayer : players) {
+            if(svPlayer.getUuid().equals(player.getUniqueId())) {
+                for(SVPlayer svTarget : players) {
+                    if(svPlayer.hasRelation(svTarget, "meilleur_ami")) {
+                        return svTarget.getTeam().equals("fille");
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public Player getMeilleurAmiGarcon(Player player) {
+        for(SVPlayer svPlayer : players) {
+            if(svPlayer.getUuid().equals(player.getUniqueId())) {
+                for(SVPlayer svTarget : players) {
+                    if(svPlayer.hasRelation(svTarget, "meilleur_ami")) {
+                        if(svTarget.getTeam().equals("garcon")) {
+                            return Bukkit.getPlayer(svTarget.getUuid());
+                        }
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
     public boolean isCouple(Player player) {
         for(SVPlayer svPlayer : players) {
             if(svPlayer.getUuid().equals(player.getUniqueId())) {
