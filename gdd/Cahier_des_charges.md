@@ -1,19 +1,3 @@
-__**COMMANDE /couple utilisable seulement à 20 blocks**__
-
-Si elle mets un rateau, elle gagne un coeur définitif et il en perds un définitif.
-*Vous avez étés dure mais peux-être avait-il lâcher une caisse durant le diner... vous avez mis un rateau à *PSEUDO EN VERT*, 
-vous gagnez un coeur définitif mais ne pourrez plus vous remettre avec lui.
-
-Si elle mets un rateau à son meilleur ami : 
-*Votre meilleure amie vous à mis un rateau, vous ne pourrez jamais la récupérer, vous décider donc d'en finir.*
-Elle reçoit alors le message suivant :  
-*Tu à friendzone ton meilleur ami, il s'est alors suicidé, il à laissé une lettre dans laquelle il conféssais 
-"C'était la femme de ma vie, aujourd'hui elle m'a mis un rateau, si je ne peux pas l'avoir pour moi, à quoi bon être son ami...
-C'est finis, je t'aimais..."*
-
-
-
-
 Si elle se mets en couple, elle entame le déroulé couple : 
 *Félicitations, on dirait bien que votre date s'est bien déroulé, vous êtes en kiff mutuel avec *PSEUDO EN ROSE*.*
 
