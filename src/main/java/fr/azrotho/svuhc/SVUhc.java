@@ -3,8 +3,6 @@ package fr.azrotho.svuhc;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.iridium.iridiumcolorapi.IridiumColorAPI;
-
 import fr.azrotho.svuhc.commands.CoupleCommand;
 import fr.azrotho.svuhc.commands.StartCommand;
 import fr.azrotho.svuhc.commands.TeamCommand;
@@ -38,7 +36,7 @@ public class SVUhc extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new OnInventoryClose(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new OnInventoryInteraction(), this);
 
-        tag = "§f§l[" + IridiumColorAPI.process("<GRADIENT:FF00EF>§lSaint-Valentin UHC</GRADIENT:5B00FF>") + "§f§l] §e§l➤ ";
+        tag = "§f§l[§dSaint-Valentin UHC] §e§l➤ ";
         
         CatEyesRunnable catEyesRunnable = new CatEyesRunnable();
         catEyesRunnable.runTaskTimer(this, 0, 0);
