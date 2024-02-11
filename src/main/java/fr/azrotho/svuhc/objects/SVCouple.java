@@ -3,7 +3,7 @@ package fr.azrotho.svuhc.objects;
 public class SVCouple {
     private final SVPlayer player1;
     private final SVPlayer player2;
-    private final String state;
+    private String state;
     private int time;
 
     public SVCouple(SVPlayer player1, SVPlayer player2, String state) {
@@ -23,6 +23,10 @@ public class SVCouple {
 
     public String getState() {
         return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public int getTime() {

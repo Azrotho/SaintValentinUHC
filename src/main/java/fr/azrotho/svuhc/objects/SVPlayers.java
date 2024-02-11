@@ -8,6 +8,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import fr.azrotho.svuhc.SVUhc;
+import fr.azrotho.svuhc.utils.CoupleUpdate;
 
 public class SVPlayers {
     public final List<SVPlayer> players;
@@ -208,6 +209,7 @@ public class SVPlayers {
     public void addTimeToAllCouples() {
         for(SVCouple couple : couples) {
             couple.setTime(couple.getTime() + 1);
+            CoupleUpdate.update(couple);
         }
     }
 
@@ -217,6 +219,7 @@ public class SVPlayers {
 
     public void addTimeToCouple(SVCouple couple) {
         couple.setTime(couple.getTime() + 1);
+        CoupleUpdate.update(couple);
     }
 
     public void removePlayerRelations(Player player) {
@@ -225,6 +228,12 @@ public class SVPlayers {
             if(svPlayer.hasRelation(svTarget)) {
                 svTarget.removeRelation(Bukkit.getPlayer(svPlayer.getUuid()));
                 svPlayer.removeRelation(Bukkit.getPlayer(svTarget.getUuid()));
+            }
+        }
+
+        for(SVCouple couple : couples) {
+            if(couple.getPlayer1().getUuid().equals(player.getUniqueId()) || couple.getPlayer2().getUuid().equals(player.getUniqueId())) {
+                couples.remove(couple);
             }
         }
     }

@@ -1,10 +1,4 @@
-Au bout de 10 minutes de kiff, il recevront 2 coeurs d'abso non définitifs et ce message dans le tchat : 
-*On dirait bien que le stade du simple kiff est passé, vous êtes désormais en crush avec avec *PSEUDO EN ROSE*, vous gagnez ainsi deux coeurs d'abso non définitifs !*
-
 Au bout de 10 minutes de crush, il recevront 1 coeur définitif supplémentaire !
-*On dirait bien que le stade du crush est passé, *PSEUDO EN ROSE* est désormais votre bebou, 
-à force de vous envoyer des coeurs, vous avez gagné le sien, c'est pourquoi vous 
-obtenez un coeur supplémentaire définitif et la possibilité de faire le commande /uwu.
 
 Le meilleur ami recevra donc : 
 *Oh SAPERLIPOFOUETTE, ta meilleure pote est le bebou d'un mec, va vraiment falloir s'en débarasser,

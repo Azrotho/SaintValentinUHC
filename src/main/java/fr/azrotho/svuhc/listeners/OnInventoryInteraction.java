@@ -9,6 +9,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
 import fr.azrotho.svuhc.SVUhc;
+import fr.azrotho.svuhc.objects.SVCouple;
+import fr.azrotho.svuhc.objects.SVPlayer;
 
 public class OnInventoryInteraction implements Listener {
     @SuppressWarnings("deprecation")
@@ -28,6 +30,11 @@ public class OnInventoryInteraction implements Listener {
 
                 player.sendMessage(SVUhc.getInstance().getTag() + "§aFélicitations, on dirait bien que votre date s'est bien déroulé, vous êtes en kiff mutuel avec §d§l" + target.getName());
                 target.sendMessage(SVUhc.getInstance().getTag() + "§aFélicitations, on dirait bien que votre date s'est bien déroulé, vous êtes en kiff mutuel avec §d§l" + player.getName());
+                
+                SVPlayer svPlayer = SVUhc.getInstance().players().getPlayer(player);
+                SVPlayer svTarget = SVUhc.getInstance().players().getPlayer(target);
+                SVCouple couple = new SVCouple(svPlayer, svTarget, "kiff");
+                SVUhc.getInstance().players().couples.add(couple);
 
                 if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player) || SVUhc.getInstance().players().isLaMeilleureAmiFille(target)) {
                         Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player);
