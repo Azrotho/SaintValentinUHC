@@ -28,9 +28,15 @@ public class CoupleCommand implements CommandExecutor{
 
         Player p = (Player) commandSender;
         Player target = Bukkit.getPlayer(args[0]);
+
         
         if(target == null) {
             p.sendMessage(SVUhc.getInstance().getTag() + "§cLe joueur §4" + args[0] + "§c n'est pas connecté/n'existe pas.");
+            return true;
+        }
+
+        if(p == target) {
+            p.sendMessage(SVUhc.getInstance().getTag() + "§cVous ne pouvez pas vous mettre en couple avec vous même.");
             return true;
         }
 
