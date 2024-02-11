@@ -33,6 +33,21 @@ public class CoupleUpdate {
             player2.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(player2.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() + 2);
 
             couple.setTime(0);
+
+            if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player1)) {
+                Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player1);
+                MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§7Oh SAPERLIPOFOUETTE, ta meilleure pote est le bebou d'un mec, va vraiment falloir s'en débarasser, tu décide d'activer sa localisation snap pour agir et récupérer ta POTE, tu reçois donc une boussole qui pointe vers le mec de ta POTE.");
+            }
+
+            if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player2)) {
+                Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player2);
+                MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§7Oh SAPERLIPOFOUETTE, ta meilleure pote est le bebou d'un mec, va vraiment falloir s'en débarasser, tu décide d'activer sa localisation snap pour agir et récupérer ta POTE, tu reçois donc une boussole qui pointe vers le mec de ta POTE.");
+            }
+
+            if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player2)) {
+                Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player2);
+                MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§7Oh SAPERLIPOFOUETTE, ta meilleure pote est le bebou d'un mec, va vraiment falloir s'en débarasser, tu décide d'activer sa localisation snap pour agir et récupérer ta POTE, tu reçois donc une boussole qui pointe vers le mec de ta POTE.");
+            }
         }
     }
 }
