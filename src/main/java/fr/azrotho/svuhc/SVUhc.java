@@ -5,10 +5,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.iridium.iridiumcolorapi.IridiumColorAPI;
 
+import fr.azrotho.svuhc.commands.CoupleCommand;
 import fr.azrotho.svuhc.commands.StartCommand;
 import fr.azrotho.svuhc.commands.TeamCommand;
 import fr.azrotho.svuhc.listeners.FastSmelting;
 import fr.azrotho.svuhc.listeners.HasteyBoy;
+import fr.azrotho.svuhc.listeners.OnInventoryClose;
+import fr.azrotho.svuhc.listeners.OnInventoryInteraction;
 import fr.azrotho.svuhc.listeners.OnJoin;
 import fr.azrotho.svuhc.listeners.Timber;
 import fr.azrotho.svuhc.objects.SVPlayers;
@@ -25,12 +28,15 @@ public class SVUhc extends JavaPlugin {
         INSTANCE = this;
         getCommand("team").setExecutor(new TeamCommand());
         getCommand("start").setExecutor(new StartCommand());
+        getCommand("couple").setExecutor(new CoupleCommand());
         this.players = new SVPlayers();
 
         Bukkit.getServer().getPluginManager().registerEvents(new OnJoin(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new FastSmelting(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new Timber(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new HasteyBoy(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new OnInventoryClose(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new OnInventoryInteraction(), this);
 
         tag = "§f§l[" + IridiumColorAPI.process("<GRADIENT:FF00EF>§lSaint-Valentin UHC</GRADIENT:5B00FF>") + "§f§l] §e§l➤ ";
         
