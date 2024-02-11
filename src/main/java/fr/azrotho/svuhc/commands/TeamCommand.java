@@ -34,6 +34,7 @@ public class TeamCommand implements CommandExecutor {
                 }
                 SVPlayer sVPlayer = SVUhc.getInstance().players().getPlayer(player);
                 sVPlayer.setTeam(args[2].toLowerCase());
+                commandSender.sendMessage(SVUhc.getInstance().getTag() + "§aLa team de " + player.getName() + " a été définie sur " + args[2].toLowerCase());
                 break;
             case "getPlayerTeams":
                 // Possibilité de voir la team de tous les joueurs

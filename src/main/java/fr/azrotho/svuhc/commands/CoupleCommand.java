@@ -50,6 +50,14 @@ public class CoupleCommand implements CommandExecutor{
             return true;
         }
 
+        if(SVUhc.getInstance().players().isMeilleurAmi(p) && SVUhc.getInstance().players().isGarcon(p)) {
+            // Faire en sorte que le joueur p ne peut que demander à sa meilleur amie de devenir son couple
+            if(!SVUhc.getInstance().players().isMeilleurAmi(target)) {
+                p.sendMessage(SVUhc.getInstance().getTag() + "§cVous ne pouvez demander qu'à votre meilleure amie de devenir votre couple.");
+                return true;
+            }
+        }
+
         new CoupleMenu().couple(target, p);
 
         return true;
