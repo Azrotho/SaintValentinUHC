@@ -1,6 +1,7 @@
 package fr.azrotho.svuhc.listeners;
 
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -25,8 +26,8 @@ public class OnInventoryInteraction implements Listener {
             if(event.getCurrentItem().getItemMeta().getDisplayName().equals("§aAccepter")) {
                 // Couple
 
-                player.sendMessage(SVUhc.getInstance().getTag() + "§aVous avez accepté la demande de couple de " + target.getName());
-                target.sendMessage(SVUhc.getInstance().getTag() + "§a" + player.getName() + " a accepté votre demande de couple");
+                player.sendMessage(SVUhc.getInstance().getTag() + "§aFélicitations, on dirait bien que votre date s'est bien déroulé, vous êtes en kiff mutuel avec §d§l" + target.getName());
+                target.sendMessage(SVUhc.getInstance().getTag() + "§aFélicitations, on dirait bien que votre date s'est bien déroulé, vous êtes en kiff mutuel avec §d§l" + player.getName());
 
                 player.closeInventory();
                 
@@ -36,6 +37,15 @@ public class OnInventoryInteraction implements Listener {
             } 
             if(event.getCurrentItem().getItemMeta().getDisplayName().equals("§cRefuser")) {
                 // Refuser
+
+                if(SVUhc.getInstance().players().isMeilleurAmi(target) && SVUhc.getInstance().players().isGarcon(target)) {
+                    player.sendMessage(SVUhc.getInstance().getTag() + "§cTu à friendzone ton meilleur ami, il s'est alors suicidé, il à laissé une lettre dans laquelle il conféssais ");
+                    target.sendMessage(SVUhc.getInstance().getTag() + "§cVotre meilleure amie vous à mis un rateau, vous ne pourrez jamais la récupérer, vous décider donc d'en finir.");
+                    target.damage(9999);
+                    target.setGameMode(GameMode.SPECTATOR);
+                    return;
+
+                }
                 
                 player.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() + 2);
                 player.sendMessage(SVUhc.getInstance().getTag() + "§7Vous avez étés dure mais peux-être avait-il lâcher une caisse durant le diner... vous avez mis un rateau à §a" + target.getName() + "§7, vous gagnez un coeur définitif mais ne pourrez plus vous remettre avec lui");
