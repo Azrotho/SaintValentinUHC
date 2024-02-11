@@ -1,6 +1,3 @@
-Si elle se mets en couple, elle entame le déroulé couple : 
-*Félicitations, on dirait bien que votre date s'est bien déroulé, vous êtes en kiff mutuel avec *PSEUDO EN ROSE*.*
-
 Le meilleur ami recevra donc : 
 *Oh VINDEDIOU, ta meilleure pote est en kiff, va falloir pagayer pour retrouver son mec et s'en débarasser sinon tu pourra jamais pécho ta POTE !*
 
