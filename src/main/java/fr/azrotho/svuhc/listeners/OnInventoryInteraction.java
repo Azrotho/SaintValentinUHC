@@ -29,6 +29,13 @@ public class OnInventoryInteraction implements Listener {
                 player.sendMessage(SVUhc.getInstance().getTag() + "§aFélicitations, on dirait bien que votre date s'est bien déroulé, vous êtes en kiff mutuel avec §d§l" + target.getName());
                 target.sendMessage(SVUhc.getInstance().getTag() + "§aFélicitations, on dirait bien que votre date s'est bien déroulé, vous êtes en kiff mutuel avec §d§l" + player.getName());
 
+                if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player) || SVUhc.getInstance().players().isLaMeilleureAmiFille(target)) {
+                    if(!SVUhc.getInstance().players().MeilleurAmiAreInCouple(player)) {
+                        Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player);
+                        MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§fOh VINDEDIOU, ta meilleure pote est en kiff, va falloir pagayer pour retrouver son mec et s'en débarasser sinon tu pourra jamais pécho ta POTE !");
+                    }
+                }
+
                 player.closeInventory();
                 
                 SVUhc.getInstance().players().addRelation(player, target, "kiff");
