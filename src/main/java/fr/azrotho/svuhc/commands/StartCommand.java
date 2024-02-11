@@ -1,5 +1,6 @@
 package fr.azrotho.svuhc.commands;
 import org.bukkit.*;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -27,6 +28,7 @@ public class StartCommand implements CommandExecutor {
             
             p.getInventory().clear();
             p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 10 * 20 * 60, 20, true));
+            p.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(20);
             p.setHealth(20);
             p.setFoodLevel(20);
             p.setSaturation(20);
