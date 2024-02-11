@@ -163,6 +163,23 @@ public class SVPlayers {
         return null;
     }
 
+    public boolean MeilleurAmiAreInCouple(Player player) {
+        for(SVPlayer svPlayer : players) {
+            if(svPlayer.getUuid().equals(player.getUniqueId())) {
+                for(SVPlayer svTarget : players) {
+                    if(svPlayer.hasRelation(svTarget, "meilleur_ami")) {
+                        for(String state : stateOfCouple) {
+                            if(svPlayer.hasRelation(svTarget, state)) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
     public boolean isCouple(Player player) {
         for(SVPlayer svPlayer : players) {
             if(svPlayer.getUuid().equals(player.getUniqueId())) {
