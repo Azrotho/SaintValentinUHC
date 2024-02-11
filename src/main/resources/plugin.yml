@@ -10,3 +10,7 @@ commands:
   start:
     description: "Admin Command: Start the game"
     usage: "/start"
+  couple:
+    description: "Demander à un joueur de se mettre en couple avec vous"
+    usage: "/couple <args>"
+    aliases: [pecho, declaration]

@@ -106,4 +106,8 @@ public class SVPlayers {
             }
         }
     }
+
+    public void couple(Player player1, Player player2) {
+        
+    }
 }
