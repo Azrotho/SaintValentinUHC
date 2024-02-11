@@ -141,7 +141,7 @@ public class SVPlayers {
             if(svPlayer.getUuid().equals(player.getUniqueId())) {
                 for(SVPlayer svTarget : players) {
                     if(svPlayer.hasRelation(svTarget, "meilleur_ami")) {
-                        return svTarget.getTeam().equals("fille");
+                        return svPlayer.getTeam().equals("fille");
                     }
                 }
             }
