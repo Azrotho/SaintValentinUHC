@@ -1,10 +1,12 @@
 package fr.azrotho.svuhc.listeners;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 
+import fr.azrotho.svuhc.SVUhc;
 import fr.azrotho.svuhc.utils.CoupleMenu;
 
 public class OnInventoryClose implements Listener {
@@ -22,7 +24,9 @@ public class OnInventoryClose implements Listener {
             Player player = (Player) event.getPlayer();
             Player target = player.getServer().getPlayer(event.getView().getTitle().replace("§cDemande de couple de ", ""));
             if(target == null) return;
-            new CoupleMenu().couple(target, player);
+            Bukkit.getScheduler().runTaskLater(SVUhc.getInstance(), () -> {
+                new CoupleMenu().couple(target, player);
+            }, 1);
         }
 
     }
