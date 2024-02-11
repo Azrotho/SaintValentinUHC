@@ -39,7 +39,7 @@ public class OnInventoryInteraction implements Listener {
                 // Refuser
 
                 if(SVUhc.getInstance().players().isMeilleurAmi(target) && SVUhc.getInstance().players().isGarcon(target)) {
-                    player.sendMessage(SVUhc.getInstance().getTag() + "§cTu à friendzone ton meilleur ami, il s'est alors suicidé, il à laissé une lettre dans laquelle il conféssais ");
+                    player.sendMessage(SVUhc.getInstance().getTag() + "§cTu à friendzone ton meilleur ami, il s'est alors suicidé, il à laissé une lettre dans laquelle il conféssais C'était la femme de ma vie, aujourd'hui elle m'a mis un rateau, si je ne peux pas l'avoir pour moi, à quoi bon être son ami... C'est finis, je t'aimais...");
                     target.sendMessage(SVUhc.getInstance().getTag() + "§cVotre meilleure amie vous à mis un rateau, vous ne pourrez jamais la récupérer, vous décider donc d'en finir.");
                     target.damage(9999);
                     target.setGameMode(GameMode.SPECTATOR);
