@@ -1,8 +1,6 @@
 __**COMMANDE /couple utilisable seulement à 20 blocks**__
 
 Si elle mets un rateau, elle gagne un coeur définitif et il en perds un définitif.
-*La vie est parfois parcemée d'embuche, en effet l'heure est au chagrin d'amour puisque *PSEUDO EN ROSE* vous à mis un râteau,
-vous perdez alors un coeur définitif et ne pourrez plus jamais vous mettre en couple avec elle.*
 *Vous avez étés dure mais peux-être avait-il lâcher une caisse durant le diner... vous avez mis un rateau à *PSEUDO EN VERT*, 
 vous gagnez un coeur définitif mais ne pourrez plus vous remettre avec lui.
 

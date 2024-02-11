@@ -38,11 +38,12 @@ public class OnInventoryInteraction implements Listener {
                 // Refuser
                 
                 player.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() + 2);
-                player.sendMessage(SVUhc.getInstance().getTag() + "§cVous avez refusé la demande de couple de " + target.getName());
+                player.sendMessage(SVUhc.getInstance().getTag() + "§7Vous avez étés dure mais peux-être avait-il lâcher une caisse durant le diner... vous avez mis un rateau à §a" + target.getName() + "§7, vous gagnez un coeur définitif mais ne pourrez plus vous remettre avec lui");
 
-                target.sendMessage(SVUhc.getInstance().getTag() + "§c" + player.getName() + " a refusé votre demande de couple");
+                target.sendMessage(SVUhc.getInstance().getTag() + "§7La vie est parfois parcemée d'embuche, en effet l'heure est au chagrin d'amour puisque §d§l" + player.getName() +  "§7 vous à mis un râteau, vous perdez alors un coeur définitif et ne pourrez plus jamais vous mettre en couple avec elle.");
                 target.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() - 2);
 
+                SVUhc.getInstance().players().addRateau(player, target);
                 OnInventoryClose.letPlayer.add(player);
                 player.closeInventory();
             }

@@ -1,6 +1,7 @@
 package fr.azrotho.svuhc.objects;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.bukkit.Bukkit;
@@ -10,6 +11,15 @@ import fr.azrotho.svuhc.SVUhc;
 
 public class SVPlayers {
     public final List<SVPlayer> players;
+    public final HashMap<Player, Player> rateau = new HashMap<>();
+    public final List<String> stateOfCouple = new ArrayList<>(List.of(
+        "kiff",
+        "crush",
+        "bebou",
+        "canard",
+        "fillancé",
+        "marié"
+    ));
 
     public SVPlayers() {
         this.players = new ArrayList<>();
@@ -125,7 +135,28 @@ public class SVPlayers {
         }
     }
 
-    public void couple(Player player1, Player player2) {
-        
+    public boolean isCouple(Player player) {
+        for(SVPlayer svPlayer : players) {
+            if(svPlayer.getUuid().equals(player.getUniqueId())) {
+                for(SVPlayer svTarget : players) {
+                    for(String state : stateOfCouple) {
+                        if(svPlayer.hasRelation(svTarget, state)) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
     }
+
+    public void addRateau(Player player, Player target) {
+        rateau.put(player, target);
+        rateau.put(target, player);
+    }
+
+    public boolean isInRateau(Player player, Player target) {
+        return rateau.containsKey(player) && rateau.get(player).equals(target);
+    }
+
 }

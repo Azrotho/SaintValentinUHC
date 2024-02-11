@@ -45,8 +45,13 @@ public class CoupleCommand implements CommandExecutor{
             return true;
         }
 
-        if(p.getLocation().distance(target.getLocation()) > 50) {
+        if(p.getLocation().distance(target.getLocation()) > 20) {
             p.sendMessage(SVUhc.getInstance().getTag() + "§cLe joueur §4" + args[0] + "§c est trop loin de vous.");
+            return true;
+        }
+
+        if(SVUhc.getInstance().players().isCouple(p)) {
+            p.sendMessage(SVUhc.getInstance().getTag() + "§cVous êtes déjà en couple.");
             return true;
         }
 
