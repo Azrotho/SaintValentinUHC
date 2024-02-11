@@ -65,6 +65,14 @@ public class SVPlayers {
         player.addRelation(Bukkit.getPlayer(target.getUuid()), "meilleur_ami");
     }
 
+    public void addRelation(Player player, Player target, String relation) {
+        getPlayer(player).addRelation(target, relation);
+    }
+
+    public void addRelation(SVPlayer player, SVPlayer target, String relation) {
+        player.addRelation(Bukkit.getPlayer(target.getUuid()), relation);
+    }
+
     public Boolean hasRelation(Player player, Player target, String relation) {
         return getPlayer(player).getRelation(target).equals(relation);
     }

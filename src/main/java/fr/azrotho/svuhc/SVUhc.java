@@ -36,7 +36,7 @@ public class SVUhc extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new OnInventoryClose(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new OnInventoryInteraction(), this);
 
-        tag = "§f§l[§dSaint-Valentin UHC] §e§l➤ ";
+        tag = "§f§l[§d§lSaint-Valentin UHC§f§l] §e§l➤ ";
         
         CatEyesRunnable catEyesRunnable = new CatEyesRunnable();
         catEyesRunnable.runTaskTimer(this, 0, 0);

@@ -15,7 +15,7 @@ public class CoupleMenu {
         // Si le joueur clique sur l'item pour accepter, alors on appelle la méthode setMeilleurAmi de SVPlayers
         // Si le joueur clique sur l'item pour refuser, alors on envoie un message à target pour lui dire que la demande a été refusée
 
-        Inventory inv = Bukkit.createInventory(null, 9, "§cDemande de couple de " + player.getName());
+        Inventory inv = Bukkit.createInventory(null, 9, "§cDemande de couple de " + target.getName());
         player.openInventory(inv);
 
         // Item pour accepter

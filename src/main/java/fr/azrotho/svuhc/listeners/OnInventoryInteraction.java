@@ -27,15 +27,24 @@ public class OnInventoryInteraction implements Listener {
 
                 player.sendMessage(SVUhc.getInstance().getTag() + "§aVous avez accepté la demande de couple de " + target.getName());
                 target.sendMessage(SVUhc.getInstance().getTag() + "§a" + player.getName() + " a accepté votre demande de couple");
-                // SVUhc.getInstance().getSvPlayers().setMeilleurAmi(player, target);
-            } else if(event.getCurrentItem().getItemMeta().getDisplayName().equals("§cRefuser")) {
+
+                player.closeInventory();
+                
+                SVUhc.getInstance().players().addRelation(player, target, "kiff");
+                SVUhc.getInstance().players().addRelation(target, player, "kiff");
+                OnInventoryClose.letPlayer.add(player);
+            } 
+            if(event.getCurrentItem().getItemMeta().getDisplayName().equals("§cRefuser")) {
                 // Refuser
                 
-                player.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(player.getAttribute(null).getBaseValue() + 2);
+                player.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() + 2);
                 player.sendMessage(SVUhc.getInstance().getTag() + "§cVous avez refusé la demande de couple de " + target.getName());
 
                 target.sendMessage(SVUhc.getInstance().getTag() + "§c" + player.getName() + " a refusé votre demande de couple");
-                target.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(target.getAttribute(null).getBaseValue() - 2);
+                target.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() - 2);
+
+                OnInventoryClose.letPlayer.add(player);
+                player.closeInventory();
             }
         }
     }
