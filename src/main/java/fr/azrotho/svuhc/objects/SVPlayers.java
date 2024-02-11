@@ -81,6 +81,16 @@ public class SVPlayers {
         return player.getRelation(Bukkit.getPlayer(target.getUuid())).equals(relation);
     }
 
+    public Boolean isMeilleurAmi(Player player) {
+        SVPlayer svPlayer = getPlayer(player);
+        for(SVPlayer svTarget : players) {
+            if(svTarget.getUuid().equals(player.getUniqueId())) {
+                return svPlayer.hasRelation(svTarget, "meilleur_ami");
+            }
+        }
+        return false;
+    }
+
     public void designeMeilleurAmi() {
         // Désigne aléatoirement 2 Joueurs qui sont 1 garçon et 1 fille et les mets en relation "meilleur_ami", vérifier que les 2 joueurs ne sont pas déjà en relation
         List<SVPlayer> garcons = new ArrayList<>();
