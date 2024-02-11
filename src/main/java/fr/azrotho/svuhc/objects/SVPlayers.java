@@ -12,6 +12,7 @@ import fr.azrotho.svuhc.SVUhc;
 public class SVPlayers {
     public final List<SVPlayer> players;
     public final HashMap<Player, Player> rateau = new HashMap<>();
+    public final List<SVCouple> couples = new ArrayList<>();
     public final List<String> stateOfCouple = new ArrayList<>(List.of(
         "kiff",
         "crush",
@@ -202,6 +203,12 @@ public class SVPlayers {
 
     public boolean isInRateau(Player player, Player target) {
         return rateau.containsKey(player) && rateau.get(player).equals(target);
+    }
+
+    public void addTimeToAllCouples() {
+        for(SVCouple couple : couples) {
+            couple.setTime(couple.getTime() + 1);
+        }
     }
 
 }

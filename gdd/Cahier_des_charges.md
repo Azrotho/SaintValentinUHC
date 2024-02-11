@@ -1,7 +1,3 @@
-Le meilleur ami recevra donc : 
-*Oh VINDEDIOU, ta meilleure pote est en kiff, va falloir pagayer pour retrouver son mec et s'en débarasser sinon tu pourra jamais pécho ta POTE !*
-
-
 Au bout de 10 minutes de kiff, il recevront 2 coeurs d'abso non définitifs et ce message dans le tchat : 
 *On dirait bien que le stade du simple kiff est passé, vous êtes désormais en crush avec avec *PSEUDO EN ROSE*, vous gagnez ainsi deux coeurs d'abso non définitifs !*
 
