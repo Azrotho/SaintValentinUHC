@@ -36,9 +36,14 @@ public class OnInventoryInteraction implements Listener {
                 SVCouple couple = new SVCouple(svPlayer, svTarget, "kiff");
                 SVUhc.getInstance().players().couples.add(couple);
 
-                if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player) || SVUhc.getInstance().players().isLaMeilleureAmiFille(target)) {
+                if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player)) {
                         Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player);
                         MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§fOh VINDEDIOU, ta meilleure pote est en kiff, va falloir pagayer pour retrouver son mec et s'en débarasser sinon tu pourra jamais pécho ta POTE !");
+                }
+
+                if(SVUhc.getInstance().players().isLaMeilleureAmiFille(target)) {
+                    Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(target);
+                    MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§fOh VINDEDIOU, ta meilleure pote est en kiff, va falloir pagayer pour retrouver son mec et s'en débarasser sinon tu pourra jamais pécho ta POTE !");
                 }
 
                 player.closeInventory();
