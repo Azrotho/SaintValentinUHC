@@ -8,12 +8,14 @@ import fr.azrotho.svuhc.commands.StartCommand;
 import fr.azrotho.svuhc.commands.TeamCommand;
 import fr.azrotho.svuhc.listeners.FastSmelting;
 import fr.azrotho.svuhc.listeners.HasteyBoy;
+import fr.azrotho.svuhc.listeners.OnDeath;
 import fr.azrotho.svuhc.listeners.OnInventoryClose;
 import fr.azrotho.svuhc.listeners.OnInventoryInteraction;
 import fr.azrotho.svuhc.listeners.OnJoin;
 import fr.azrotho.svuhc.listeners.Timber;
 import fr.azrotho.svuhc.objects.SVPlayers;
 import fr.azrotho.svuhc.runnable.CatEyesRunnable;
+import fr.azrotho.svuhc.runnable.TimeCoupleRunnable;
 
 public class SVUhc extends JavaPlugin {
     private static SVUhc INSTANCE;
@@ -35,11 +37,15 @@ public class SVUhc extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new HasteyBoy(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new OnInventoryClose(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new OnInventoryInteraction(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new OnDeath(), this);
 
         tag = "§f§l[§d§lSaint-Valentin UHC§f§l] §e§l➤ ";
         
         CatEyesRunnable catEyesRunnable = new CatEyesRunnable();
         catEyesRunnable.runTaskTimer(this, 0, 0);
+
+        TimeCoupleRunnable timeCoupleRunnable = new TimeCoupleRunnable();
+        timeCoupleRunnable.runTaskTimer(this, 0, 20);
     }
 
     @Override

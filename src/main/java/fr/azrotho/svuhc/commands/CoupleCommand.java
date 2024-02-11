@@ -1,6 +1,7 @@
 package fr.azrotho.svuhc.commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -55,8 +56,23 @@ public class CoupleCommand implements CommandExecutor{
             return true;
         }
 
+        if(SVUhc.getInstance().players().isCouple(target)) {
+            p.sendMessage(SVUhc.getInstance().getTag() + "§cLe joueur §4" + args[0] + "§c est déjà en couple.");
+            return true;
+        }
+
         if(SVUhc.getInstance().players().isInRateau(p, target)) {
             p.sendMessage(SVUhc.getInstance().getTag() + "§cVous avez déjà mis/être pris un rateau à §4" + target.getName());
+            return true;
+        }
+
+        if(p.getGameMode().equals(GameMode.SPECTATOR)) {
+            p.sendMessage(SVUhc.getInstance().getTag() + "§cVous ne pouvez pas vous mettre en couple en mode spectateur.");
+            return true;
+        }
+
+        if(target.getGameMode().equals(GameMode.SPECTATOR)) {
+            p.sendMessage(SVUhc.getInstance().getTag() + "§cVous ne pouvez pas vous mettre en couple avec un joueur en mode spectateur.");
             return true;
         }
 

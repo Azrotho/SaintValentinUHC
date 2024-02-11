@@ -219,4 +219,14 @@ public class SVPlayers {
         couple.setTime(couple.getTime() + 1);
     }
 
+    public void removePlayerRelations(Player player) {
+        SVPlayer svPlayer = getPlayer(player);
+        for(SVPlayer svTarget : players) {
+            if(svPlayer.hasRelation(svTarget)) {
+                svTarget.removeRelation(Bukkit.getPlayer(svPlayer.getUuid()));
+                svPlayer.removeRelation(Bukkit.getPlayer(svTarget.getUuid()));
+            }
+        }
+    }
+
 }

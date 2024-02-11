@@ -54,4 +54,8 @@ public class SVPlayer {
     public boolean hasRelation(SVPlayer player, String relation) {
         return this.relations.containsKey(Bukkit.getPlayer(player.getUuid())) && this.relations.get(Bukkit.getPlayer(player.getUuid())).equals(relation);
     }
+
+    public boolean hasRelation(SVPlayer player) {
+        return this.relations.containsKey(Bukkit.getPlayer(player.getUuid()));
+    }
 }
