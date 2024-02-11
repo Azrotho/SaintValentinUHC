@@ -20,15 +20,19 @@ public class CoupleUpdate {
 
             player1.addPotionEffect(new PotionEffect(org.bukkit.potion.PotionEffectType.ABSORPTION, 60 * 20, 0, false, false));
             player2.addPotionEffect(new PotionEffect(org.bukkit.potion.PotionEffectType.ABSORPTION, 60 * 20, 0, false, false));
+
+            couple.setTime(0);
         }
 
-        if(couple.getTime() == 1200 && couple.getState().equals("crush")) {
+        if(couple.getTime() == 600 && couple.getState().equals("crush")) {
             couple.setState("bebou");
             player1.sendMessage(SVUhc.getInstance().getTag() + "§7On dirait bien que le stade du crush est passé, §d§l" + player2.getName() + " §7est désormais votre bebou, à force de vous envoyer des coeurs, vous avez gagné le sien, c'est pourquoi vous obtenez un coeur supplémentaire définitif et la possibilité de faire le commande /uwu.");
             player2.sendMessage(SVUhc.getInstance().getTag() + "§7On dirait bien que le stade du crush est passé, §d§l" + player1.getName() + " §7est désormais votre bebou, à force de vous envoyer des coeurs, vous avez gagné le sien, c'est pourquoi vous obtenez un coeur supplémentaire définitif et la possibilité de faire le commande /uwu.");
 
             player1.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(player1.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() + 2);
             player2.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(player2.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() + 2);
+
+            couple.setTime(0);
         }
     }
 }

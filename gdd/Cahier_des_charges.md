@@ -1,5 +1,3 @@
-Au bout de 10 minutes de crush, il recevront 1 coeur définitif supplémentaire !
-
 Le meilleur ami recevra donc : 
 *Oh SAPERLIPOFOUETTE, ta meilleure pote est le bebou d'un mec, va vraiment falloir s'en débarasser,
 tu décide d'activer sa localisation snap pour agir et récupérer ta POTE, 
