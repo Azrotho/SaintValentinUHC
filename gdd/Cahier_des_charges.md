@@ -11,9 +11,6 @@ Le meilleur ami recevra donc :
 tu décide d'activer sa localisation snap pour agir et récupérer ta POTE, 
 tu reçois donc une boussole qui pointe vers le mec de ta POTE.*
 
-
-
-
 Au bout de 10 minutes à être bebou, ils écoperont de l'effet weakness 1.
 *On dirait bien que la relation avance, malheureusement, vous êtes devenu un véritable canard...
 vous écopez donc de l'effet weakness 1 jusqu'à vos fillancaïlles.* 
