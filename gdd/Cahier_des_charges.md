@@ -1,5 +1,3 @@
-## Boussole de tracking
-
 Au bout de 10 minutes à être bebou, ils écoperont de l'effet weakness 1.
 *On dirait bien que la relation avance, malheureusement, vous êtes devenu un véritable canard...
 vous écopez donc de l'effet weakness 1 jusqu'à vos fillancaïlles.* 
