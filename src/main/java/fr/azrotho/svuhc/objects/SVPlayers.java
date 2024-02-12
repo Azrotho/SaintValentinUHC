@@ -238,4 +238,23 @@ public class SVPlayers {
         }
     }
 
+    public Player getCrushDeLaMeilleurePote(Player player) {
+        for(SVPlayer svPlayer : players) {
+            if(svPlayer.getUuid().equals(player.getUniqueId())) {
+                for(SVPlayer svTarget : players) {
+                    if(svPlayer.hasRelation(svTarget, "meilleur_ami")) {
+                        for(SVCouple couple : couples) {
+                            if(couple.getPlayer1().getUuid().equals(svTarget.getUuid())) {
+                                return Bukkit.getPlayer(couple.getPlayer2().getUuid());
+                            } else if(couple.getPlayer2().getUuid().equals(svTarget.getUuid())) {
+                                return Bukkit.getPlayer(couple.getPlayer1().getUuid());
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
 }
