@@ -49,7 +49,7 @@ public class SVUhc extends JavaPlugin {
         timeCoupleRunnable.runTaskTimer(this, 0, 0);
 
         TrackingRunnable trackingRunnable = new TrackingRunnable();
-        trackingRunnable.runTaskTimer(this, 0, 0);
+        trackingRunnable.runTaskTimer(this, 0, 20);
     }
 
     @Override

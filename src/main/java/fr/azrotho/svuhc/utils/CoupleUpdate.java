@@ -46,5 +46,28 @@ public class CoupleUpdate {
                 MeilleurAmi.getInventory().addItem(PluginsItemStackUtils.getTracker());
             }
         }
+        
+        if(couple.getTime() == 600 && couple.getState().equals("bebou")) {
+            couple.setState("canard");
+
+            player1.sendMessage(SVUhc.getInstance().getTag() + "§7On dirait bien que la relation avance, malheureusement, vous êtes devenu un véritable canard... Vous écopez donc de l'effet weakness 1 jusqu'à vos fillancaïlles.");
+            player2.sendMessage(SVUhc.getInstance().getTag() + "§7On dirait bien que la relation avance, malheureusement, vous êtes devenu un véritable canard... Vous écopez donc de l'effet weakness 1 jusqu'à vos fillancaïlles.");
+
+            player1.addPotionEffect(new PotionEffect(org.bukkit.potion.PotionEffectType.WEAKNESS, 60 * 20 * 10, 0, false, false));
+            player2.addPotionEffect(new PotionEffect(org.bukkit.potion.PotionEffectType.WEAKNESS, 60 * 20 * 10, 0, false, false));
+
+            couple.setTime(0);
+        }
+
+        if(couple.getTime() == 600 && couple.getState().equals("canard")) {
+            couple.setState("fillance");
+            player1.sendMessage(SVUhc.getInstance().getTag() + "§7On dirait bien que l'heure est à la demande...Vous venez de vous passer la bague au doigts, vous êtes fillancés avec §d§l" + player2.getName() + "§7, vous gagnez donc 2 coeurs définitifs supplémentaires et perdez votre effet weakness 1");
+            player2.sendMessage(SVUhc.getInstance().getTag() + "§7On dirait bien que l'heure est à la demande...Vous venez de vous passer la bague au doigts, vous êtes fillancés avec §d§l" + player1.getName() + "§7, vous gagnez donc 2 coeurs définitifs supplémentaires et perdez votre effet weakness 1");
+
+            player1.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(player1.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() + 4);
+            player2.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(player2.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() + 4);
+
+            couple.setTime(0);
+        }
     }
 }

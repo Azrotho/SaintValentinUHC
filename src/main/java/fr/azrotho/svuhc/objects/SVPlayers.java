@@ -19,8 +19,8 @@ public class SVPlayers {
         "crush",
         "bebou",
         "canard",
-        "fillancé",
-        "marié"
+        "fillance",
+        "marie"
     ));
 
     public SVPlayers() {

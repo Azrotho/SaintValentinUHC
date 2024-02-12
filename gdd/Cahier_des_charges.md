@@ -1,10 +1,3 @@
-Au bout de 10 minutes à être bebou, ils écoperont de l'effet weakness 1.
-*On dirait bien que la relation avance, malheureusement, vous êtes devenu un véritable canard...
-vous écopez donc de l'effet weakness 1 jusqu'à vos fillancaïlles.* 
-
-Au bout de 10 minutes à être canard, il recevront 2 nouveaux coeurs définitifs et perdont leur effet weakness !
-*On dirait bien que l'heure est à la demande...Vous venez de vous passer la bague au doigts, vous êtes fillancés avec *PSEUDO EN ROSE*, vous gagnez donc 2 coeurs définitifs supplémentaires et perdez votre effet weakness 1.
-
 Au bout de 10 minutes de fillancailles, ils seront à 30 coeurs mais en vie partagée dans le couple
  (1 coeur perdu pour 1 = 1 coeur perdu pour l'autre) comme pour la survie hardcore que tu m'as dev)
 *C'est le grand jour, vous êtes MARIÉS, 2 GOSSES, 1 LABRADOR ET UN SCÉNIC ROUGE avec *PSEUDO EN ROSE*,
