@@ -18,8 +18,8 @@ public class CoupleUpdate {
             player1.sendMessage(SVUhc.getInstance().getTag() + "§7On dirait bien que le stade du simple kiff est passé, vous êtes désormais en crush avec avec §d§l"+ player2.getName() + "§7, vous gagnez ainsi deux coeurs d'abso non définitifs !");
             player2.sendMessage(SVUhc.getInstance().getTag() + "§7On dirait bien que le stade du simple kiff est passé, vous êtes désormais en crush avec avec §d§l"+ player1.getName() + "§7, vous gagnez ainsi deux coeurs d'abso non définitifs !");
 
-            player1.addPotionEffect(new PotionEffect(org.bukkit.potion.PotionEffectType.ABSORPTION, 60 * 20, 0, false, false));
-            player2.addPotionEffect(new PotionEffect(org.bukkit.potion.PotionEffectType.ABSORPTION, 60 * 20, 0, false, false));
+            player1.addPotionEffect(new PotionEffect(org.bukkit.potion.PotionEffectType.ABSORPTION, 60 * 20 * 10, 0, false, false));
+            player2.addPotionEffect(new PotionEffect(org.bukkit.potion.PotionEffectType.ABSORPTION, 60 * 20 * 10, 0, false, false));
 
             couple.setTime(0);
         }

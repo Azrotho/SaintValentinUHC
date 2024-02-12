@@ -10,7 +10,7 @@ public class TimeCoupleRunnable extends BukkitRunnable {
     @Override
     public void run() {
         for(SVCouple couple : SVUhc.getInstance().players().couples) {
-            couple.setTime(couple.getTime() + 1);
+            SVUhc.getInstance().players().addTimeToCouple(couple);
         }
     }
     

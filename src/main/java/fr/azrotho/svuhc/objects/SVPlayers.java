@@ -95,9 +95,9 @@ public class SVPlayers {
 
     public Boolean isMeilleurAmi(Player player) {
         SVPlayer svPlayer = getPlayer(player);
-        for(SVPlayer svTarget : players) {
-            if(svTarget.getUuid().equals(player.getUniqueId())) {
-                return svPlayer.hasRelation(svTarget, "meilleur_ami");
+        for(Player player2 : Bukkit.getOnlinePlayers()) {
+            if(svPlayer.hasRelation(player2, "meilleur_ami")) {
+                return true;
             }
         }
         return false;

@@ -46,10 +46,10 @@ public class SVUhc extends JavaPlugin {
         catEyesRunnable.runTaskTimer(this, 0, 0);
 
         TimeCoupleRunnable timeCoupleRunnable = new TimeCoupleRunnable();
-        timeCoupleRunnable.runTaskTimer(this, 0, 20);
+        timeCoupleRunnable.runTaskTimer(this, 0, 0);
 
         TrackingRunnable trackingRunnable = new TrackingRunnable();
-        trackingRunnable.runTaskTimer(this, 0, 5);
+        trackingRunnable.runTaskTimer(this, 0, 0);
     }
 
     @Override

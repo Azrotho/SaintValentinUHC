@@ -18,7 +18,7 @@ public class TrackingRunnable extends BukkitRunnable {
             if(player.getInventory().getItemInMainHand() == null) continue;
             if(player.getInventory().getItemInMainHand().getItemMeta() == null) continue;
             if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName() == null) continue;
-            if(player.getInventory().getItemInMainHand().isSimilar(PluginsItemStackUtils.getTracker())) {
+            if(player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("§e§lLocalisation Snap")) {
                 if(SVUhc.getInstance().players().isMeilleurAmi(player) && SVUhc.getInstance().players().isGarcon(player)) {
                     Player target = SVUhc.getInstance().players().getCrushDeLaMeilleurePote(player);
                     if(target == null) {

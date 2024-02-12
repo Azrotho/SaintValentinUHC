@@ -12,7 +12,7 @@ public class PluginsItemStackUtils {
     public static ItemStack getTracker() {
         ItemStack tracker = new ItemStack(Material.COMPASS);
         ItemMeta trackerMeta = tracker.getItemMeta();
-        trackerMeta.setDisplayName("§e§lLocalisation Snap'");
+        trackerMeta.setDisplayName("§e§lLocalisation Snap");
         trackerMeta.setLore(List.of(
             "§eTenez cette boussole dans la main pour tracker",
             "§ele crush de votre pote."
