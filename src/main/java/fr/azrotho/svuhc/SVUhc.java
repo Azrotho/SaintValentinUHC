@@ -3,9 +3,12 @@ package fr.azrotho.svuhc;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import fr.azrotho.svuhc.commands.BisouCommand;
+import fr.azrotho.svuhc.commands.ColleSerreCommand;
 import fr.azrotho.svuhc.commands.CoupleCommand;
 import fr.azrotho.svuhc.commands.StartCommand;
 import fr.azrotho.svuhc.commands.TeamCommand;
+import fr.azrotho.svuhc.commands.UWUCommand;
 import fr.azrotho.svuhc.listeners.FastSmelting;
 import fr.azrotho.svuhc.listeners.HasteyBoy;
 import fr.azrotho.svuhc.listeners.OnDamage;
@@ -31,6 +34,9 @@ public class SVUhc extends JavaPlugin {
         getCommand("team").setExecutor(new TeamCommand());
         getCommand("start").setExecutor(new StartCommand());
         getCommand("couple").setExecutor(new CoupleCommand());
+        getCommand("bisou").setExecutor(new BisouCommand());
+        getCommand("uwu").setExecutor(new UWUCommand());
+        getCommand("colleserre").setExecutor(new ColleSerreCommand());
         this.players = new SVPlayers();
 
         Bukkit.getServer().getPluginManager().registerEvents(new OnJoin(), this);
