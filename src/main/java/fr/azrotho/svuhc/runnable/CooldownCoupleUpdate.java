@@ -1,7 +1,5 @@
 package fr.azrotho.svuhc.runnable;
 
-import java.util.Iterator;
-
 import org.bukkit.scheduler.BukkitRunnable;
 
 import fr.azrotho.svuhc.SVUhc;
