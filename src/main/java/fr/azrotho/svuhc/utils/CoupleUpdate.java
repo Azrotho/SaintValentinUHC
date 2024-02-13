@@ -85,8 +85,24 @@ public class CoupleUpdate {
 
             player1.getInventory().addItem(new ItemStack(Material.GOLDEN_APPLE, 5));
             player2.getInventory().addItem(new ItemStack(Material.GOLDEN_APPLE, 5));
-            
+
             couple.setTime(0);
+
+            if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player1)) {
+                Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player1);
+                player1.sendMessage(SVUhc.getInstance().getTag() + "§fTon meilleur ami s'est suicidé, il à laissé une lettre dans laquelle il conféssais ''C'était la femme de ma vie, aujourd'hui elle s'est mariée, si je ne peux plus l'avoir à quoi bon être son ami...C'est finis, je t'aimais...''");
+                MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§fVotre meilleure amie est mariée, vous ne pourrez jamais la récupérer, vous décider donc d'en finir.");
+                MeilleurAmi.damage(1000.0D);
+
+            }
+
+            if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player2)) {
+                Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player2);
+                player2.sendMessage(SVUhc.getInstance().getTag() + "§fTon meilleur ami s'est suicidé, il à laissé une lettre dans laquelle il conféssais ''C'était la femme de ma vie, aujourd'hui elle s'est mariée, si je ne peux plus l'avoir à quoi bon être son ami...C'est finis, je t'aimais...''");
+                MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§fVotre meilleure amie est mariée, vous ne pourrez jamais la récupérer, vous décider donc d'en finir.");
+                MeilleurAmi.damage(1000.0D);
+            }
+
         }
     }
 }

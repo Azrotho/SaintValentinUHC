@@ -1,11 +1,3 @@
-Le meilleur ami est donc /kill, puisqu'il n'a plus aucune chance de se mettre avec sa meilleure amie, vu qu'elle est en couple :
-*Votre meilleure amie est mariée, vous ne pourrez jamais la récupérer, vous décider donc d'en finir.*
-
-La femme maintenant mariée reçoit le message suivant : 
-*Ton meilleur ami s'est suicidé, il à laissé une lettre dans laquelle il conféssais 
-"C'était la femme de ma vie, aujourd'hui elle s'est mariée, si je ne peux plus l'avoir à quoi bon être son ami...C'est finis, je t'aimais..."*
-
-
 /bisou -> dispo dès le stade "kiff" 
 Si non en kiff où + -> Cette commande est réservé aux couples...désolé.
 Si en kiff où + -> Vous avez eu un p'tit bisou, ça vous donne de la force, vous avez donc l'effet force 1 pendant 30 secondes, faites-en bon usage.
