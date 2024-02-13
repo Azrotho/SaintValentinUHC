@@ -2,6 +2,7 @@ package fr.azrotho.svuhc.objects;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import org.bukkit.Bukkit;
@@ -239,9 +240,13 @@ public class SVPlayers {
             }
         }
 
-        for(SVCouple couple : couples) {
-            if(couple.getPlayer1().getUuid().equals(player.getUniqueId()) || couple.getPlayer2().getUuid().equals(player.getUniqueId())) {
-                couples.remove(couple);
+        if(couples.size() > 0) {
+            Iterator<SVCouple> iterator = couples.iterator();
+            while (iterator.hasNext()) {
+                SVCouple couple = iterator.next();
+                if(couple.getPlayer1().getUuid().equals(player.getUniqueId()) || couple.getPlayer2().getUuid().equals(player.getUniqueId())) {
+                    iterator.remove();
+                }
             }
         }
     }

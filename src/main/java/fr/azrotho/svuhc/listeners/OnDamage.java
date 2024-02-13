@@ -21,7 +21,26 @@ public class OnDamage implements Listener {
             if(SVUhc.getInstance().players().isCoupleMarie(player)) {
                 Player partner = SVUhc.getInstance().players().getOtherPlayerInCouple(player);
                 if(partner == null) return;
-                partner.setHealth(partner.getHealth() - event.getFinalDamage());
+
+                Double newPlayerHealth = player.getHealth() - event.getFinalDamage();
+                if(newPlayerHealth <= 0) {
+                    SVUhc.getInstance().players().removePlayerRelations(player);
+                    SVUhc.getInstance().players().removePlayerRelations(partner);
+                    partner.damage(100);
+                    player.damage(100);
+                    return;
+                }
+
+                Double newHealth = partner.getHealth() - event.getFinalDamage();
+                if(newHealth <= 0) {
+                    SVUhc.getInstance().players().removePlayerRelations(player);
+                    SVUhc.getInstance().players().removePlayerRelations(partner);
+                    partner.damage(100);
+                    player.damage(100);
+                    return;
+                }
+
+                partner.setHealth(newHealth);
                 return;
             }
         }
