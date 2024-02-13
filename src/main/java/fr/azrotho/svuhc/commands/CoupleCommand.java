@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import fr.azrotho.svuhc.SVUhc;
+import fr.azrotho.svuhc.objects.SVPlayer;
 import fr.azrotho.svuhc.utils.CoupleMenu;
 
 public class CoupleCommand implements CommandExecutor{
@@ -73,6 +74,14 @@ public class CoupleCommand implements CommandExecutor{
 
         if(target.getGameMode().equals(GameMode.SPECTATOR)) {
             p.sendMessage(SVUhc.getInstance().getTag() + "§cVous ne pouvez pas vous mettre en couple avec un joueur en mode spectateur.");
+            return true;
+        }
+
+        SVPlayer svTarget = SVUhc.getInstance().players().getPlayer(target);
+        SVPlayer svP = SVUhc.getInstance().players().getPlayer(p);
+
+        if(svTarget.getTeam().equals(svP.getTeam())) {
+            p.sendMessage(SVUhc.getInstance().getTag() + "§cVous ne pouvez pas vous mettre en couple avec un joueur du même sexe.");
             return true;
         }
 
