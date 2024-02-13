@@ -11,9 +11,12 @@ import fr.azrotho.svuhc.SVUhc;
 
 public class OnJoin implements Listener {
     
+    @SuppressWarnings("deprecation")
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         SVUhc.getInstance().players().addPlayer(event.getPlayer());
+        event.getPlayer().setPlayerListHeader("§f§l-- [§d§lSaint-Valentin UHC§f§l] --");
+        event.getPlayer().setPlayerListFooter("§f§lDeveloppé par Azrotho \n §b§lWebsite: §f§lhttps://azrotho.fr/ \n §0§lX: §f§lhttps://twitter.com/PAzrotho \n §6§lPatreon: §f§lhttps://www.patreon.com/azrotho \n §c \n §f§l-- [§d§lSaint-Valentin UHC§f§l] --");
         if(!event.getPlayer().hasPlayedBefore()) event.getPlayer().sendMessage(SVUhc.getInstance().getTag() + "§cBienvenue sur le Serveur !");
         Player player = event.getPlayer();
         if(!SVUhc.getInstance().isStarted()) {
