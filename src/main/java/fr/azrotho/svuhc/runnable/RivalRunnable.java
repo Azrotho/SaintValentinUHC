@@ -8,14 +8,12 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import fr.azrotho.svuhc.SVUhc;
-import fr.azrotho.svuhc.objects.SVPlayer;
 
 public class RivalRunnable extends BukkitRunnable {
 
     @Override
     public void run() {
         for(Player player : Bukkit.getOnlinePlayers()) {
-            SVPlayer svPlayer = SVUhc.getInstance().players().getPlayer(player);
             if(SVUhc.getInstance().players().isMeilleurAmi(player) && SVUhc.getInstance().players().isGarcon(player)) {
                 Player meilleureAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player);
                 if(meilleureAmi != null) {

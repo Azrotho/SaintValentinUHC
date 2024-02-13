@@ -20,6 +20,7 @@ import fr.azrotho.svuhc.listeners.Timber;
 import fr.azrotho.svuhc.objects.SVPlayers;
 import fr.azrotho.svuhc.runnable.CatEyesRunnable;
 import fr.azrotho.svuhc.runnable.CooldownCoupleUpdate;
+import fr.azrotho.svuhc.runnable.RivalRunnable;
 import fr.azrotho.svuhc.runnable.TimeCoupleRunnable;
 import fr.azrotho.svuhc.runnable.TrackingRunnable;
 
@@ -63,8 +64,9 @@ public class SVUhc extends JavaPlugin {
 
         CooldownCoupleUpdate cooldownCoupleUpdate = new CooldownCoupleUpdate();
         cooldownCoupleUpdate.runTaskTimer(this, 0, 20);
-        
-        // TODO: Add Rival Runnable
+
+        RivalRunnable rivalRunnable = new RivalRunnable();
+        rivalRunnable.runTaskTimer(this, 0, 5);
     }
 
     @Override
