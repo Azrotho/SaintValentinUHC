@@ -31,7 +31,7 @@ public class UWUCommand implements CommandExecutor {
                             player2.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 60 * 20, 0, false, false, false));
                             player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 60 * 20, 0, false, false, false));
 
-                            SVUhc.getInstance().players().addCooldown(couple, "uwu", 60 * 20);
+                            SVUhc.getInstance().players().addCooldown(couple, "uwu", 60 * 25);
                         }
                     } else {
                     commandSender.sendMessage(SVUhc.getInstance().getTag() + "§fElle ne semble pas vouloir de votre mignonnerie, réessaye dans §c" + SVUhc.getInstance().players().getCooldown(couple, "uwu") + "§f secondes.");
