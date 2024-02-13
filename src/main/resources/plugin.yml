@@ -6,17 +6,17 @@ api-version: 1.20
 commands:
   team:
     description: "Admin Command: Manage teams"
-    usage: "/team <args>"
+    usage: "/team <setTeam/getPlayerTeams> [Player] [garcon/fille]"
   start:
     description: "Admin Command: Start the game"
     usage: "/start"
   couple:
     description: "Demander à un joueur de se mettre en couple avec vous"
-    usage: "/couple <args>"
+    usage: "/couple <Player>"
     aliases: [pecho, declaration]
   bisou:
     description: "Embrasser un joueur"
-    usage: "/bisou <args>"
+    usage: "/bisou"
     aliases: [kiss, kissme]
   uwu:
     description: "UwU"
@@ -24,4 +24,4 @@ commands:
     aliases: [owo]
   colleserre:
     description: "Colle un joueur"
-    usage: "/colleserre <args>"
+    usage: "/colleserre"
