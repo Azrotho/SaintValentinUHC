@@ -23,6 +23,14 @@ public class SVPlayers {
         "marie"
     ));
 
+    public final List<String> cooldownsName = new ArrayList<>(List.of(
+        "bisou",
+        "colleserre",
+        "uwu"
+    ));
+
+    public final HashMap<SVCouple, HashMap<String, Integer>> coupleCooldown = new HashMap<>();
+
     public SVPlayers() {
         this.players = new ArrayList<>();
     }
@@ -278,5 +286,69 @@ public class SVPlayers {
         }
         return null;
     }
+
+    public SVCouple getCouple(Player player) {
+        for(SVCouple couple : couples) {
+            if(couple.getPlayer1().getUuid().equals(player.getUniqueId()) || couple.getPlayer2().getUuid().equals(player.getUniqueId())) {
+                return couple;
+            }
+        }
+        return null;
+    }
+
+    public void initCoupleCooldown(SVCouple svCouple) {
+        if(!coupleCooldown.containsKey(svCouple)) {
+            coupleCooldown.put(svCouple, new HashMap<>());
+        }
+    }
+
+    public void addCooldown(SVCouple couple, String state, int time) {
+        if(coupleCooldown.containsKey(couple)) {
+            coupleCooldown.get(couple).put(state, time);
+        } else {
+            coupleCooldown.put(couple, new HashMap<>());
+            coupleCooldown.get(couple).put(state, time);
+        }
+    }
+
+
+    public void removeCooldown(SVCouple couple, String state) {
+        if(coupleCooldown.containsKey(couple)) {
+            coupleCooldown.get(couple).remove(state);
+        }
+    }
+
+    public int getCooldown(SVCouple couple, String state) {
+        if(coupleCooldown.containsKey(couple)) {
+            if(coupleCooldown.get(couple).containsKey(state)) {
+                return coupleCooldown.get(couple).get(state);
+            }
+        }
+        return 0;
+    }
+
+    public void updateCooldown(SVCouple svCouple) {
+        for(String state : cooldownsName) {
+            if(coupleCooldown.containsKey(svCouple)) {
+                if(coupleCooldown.get(svCouple).containsKey(state)) {
+                    coupleCooldown.get(svCouple).put(state, coupleCooldown.get(svCouple).get(state) - 1);
+                    if(coupleCooldown.get(svCouple).get(state) <= 0) {
+                        coupleCooldown.get(svCouple).remove(state);
+                    }
+                }
+            }
+        }
+    }
+
+    public boolean isInCooldown(SVCouple svCouple, String state) {
+        if(coupleCooldown.containsKey(svCouple)) {
+            if(coupleCooldown.get(svCouple).containsKey(state)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 
 }

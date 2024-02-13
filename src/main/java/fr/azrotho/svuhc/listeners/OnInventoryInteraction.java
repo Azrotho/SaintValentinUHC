@@ -35,22 +35,23 @@ public class OnInventoryInteraction implements Listener {
                 SVPlayer svTarget = SVUhc.getInstance().players().getPlayer(target);
                 SVCouple couple = new SVCouple(svPlayer, svTarget, "kiff");
                 SVUhc.getInstance().players().couples.add(couple);
-
-                if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player)) {
-                        Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player);
-                        MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§fOh VINDEDIOU, ta meilleure pote est en kiff, va falloir pagayer pour retrouver son mec et s'en débarasser sinon tu pourra jamais pécho ta POTE !");
-                }
-
-                if(SVUhc.getInstance().players().isLaMeilleureAmiFille(target)) {
-                    Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(target);
-                    MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§fOh VINDEDIOU, ta meilleure pote est en kiff, va falloir pagayer pour retrouver son mec et s'en débarasser sinon tu pourra jamais pécho ta POTE !");
-                }
+                SVUhc.getInstance().players().initCoupleCooldown(couple);
 
                 player.closeInventory();
                 
                 SVUhc.getInstance().players().addRelation(player, target, "kiff");
                 SVUhc.getInstance().players().addRelation(target, player, "kiff");
                 OnInventoryClose.letPlayer.add(player);
+
+                if(SVUhc.getInstance().players().isLaMeilleureAmiFille(player)) {
+                    Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(player);
+                    MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§fOh VINDEDIOU, ta meilleure pote est en kiff, va falloir pagayer pour retrouver son mec et s'en débarasser sinon tu pourra jamais pécho ta POTE !");
+                }
+
+                if(SVUhc.getInstance().players().isLaMeilleureAmiFille(target)) {
+                    Player MeilleurAmi = SVUhc.getInstance().players().getMeilleurAmiGarcon(target);
+                    MeilleurAmi.sendMessage(SVUhc.getInstance().getTag() + "§fOh VINDEDIOU, ta meilleure pote est en kiff, va falloir pagayer pour retrouver son mec et s'en débarasser sinon tu pourra jamais pécho ta POTE !");
+                }
             } 
             if(event.getCurrentItem().getItemMeta().getDisplayName().equals("§cRefuser")) {
                 // Refuser

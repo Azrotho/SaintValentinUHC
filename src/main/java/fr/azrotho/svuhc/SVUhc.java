@@ -58,6 +58,9 @@ public class SVUhc extends JavaPlugin {
 
         TrackingRunnable trackingRunnable = new TrackingRunnable();
         trackingRunnable.runTaskTimer(this, 0, 20);
+
+        // TODO: Repasser le TimeCoupleRunnable en 20 et ajouter l'update de couple
+        // TODO: Add Rival Runnable
     }
 
     @Override

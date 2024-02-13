@@ -1,5 +1,8 @@
 package fr.azrotho.svuhc.objects;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
 public class SVCouple {
     private final SVPlayer player1;
     private final SVPlayer player2;
@@ -35,5 +38,13 @@ public class SVCouple {
 
     public void setTime(int time) {
         this.time = time;
+    }
+
+    public Player getOtherPlayer(Player player) {
+        if(player.getUniqueId().equals(player1.getUuid())) {
+            return Bukkit.getPlayer(player2.getUuid());
+        } else {
+            return Bukkit.getPlayer(player1.getUuid());
+        }
     }
 }
