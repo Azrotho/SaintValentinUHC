@@ -257,4 +257,26 @@ public class SVPlayers {
         return null;
     }
 
+    public Boolean isCoupleMarie(Player player) {
+        for(SVCouple couple : couples) {
+            if(couple.getPlayer1().getUuid().equals(player.getUniqueId()) || couple.getPlayer2().getUuid().equals(player.getUniqueId())) {
+                if(couple.getState().equals("marie")) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public Player getOtherPlayerInCouple(Player player) {
+        for(SVCouple couple : couples) {
+            if(couple.getPlayer1().getUuid().equals(player.getUniqueId())) {
+                return Bukkit.getPlayer(couple.getPlayer2().getUuid());
+            } else if(couple.getPlayer2().getUuid().equals(player.getUniqueId())) {
+                return Bukkit.getPlayer(couple.getPlayer1().getUuid());
+            }
+        }
+        return null;
+    }
+
 }

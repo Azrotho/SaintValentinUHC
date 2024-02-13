@@ -8,6 +8,7 @@ import fr.azrotho.svuhc.commands.StartCommand;
 import fr.azrotho.svuhc.commands.TeamCommand;
 import fr.azrotho.svuhc.listeners.FastSmelting;
 import fr.azrotho.svuhc.listeners.HasteyBoy;
+import fr.azrotho.svuhc.listeners.OnDamage;
 import fr.azrotho.svuhc.listeners.OnDeath;
 import fr.azrotho.svuhc.listeners.OnInventoryClose;
 import fr.azrotho.svuhc.listeners.OnInventoryInteraction;
@@ -39,6 +40,7 @@ public class SVUhc extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new OnInventoryClose(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new OnInventoryInteraction(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new OnDeath(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new OnDamage(), this);
 
         tag = "§f§l[§d§lSaint-Valentin UHC§f§l] §e§l➤ ";
         

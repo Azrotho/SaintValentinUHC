@@ -1,12 +1,3 @@
-Au bout de 10 minutes de fillancailles, ils seront à 30 coeurs mais en vie partagée dans le couple
- (1 coeur perdu pour 1 = 1 coeur perdu pour l'autre) comme pour la survie hardcore que tu m'as dev)
-*C'est le grand jour, vous êtes MARIÉS, 2 GOSSES, 1 LABRADOR ET UN SCÉNIC ROUGE avec *PSEUDO EN ROSE*,
-Comme ont dit, après le mariage on partage tout, le meilleur comme le pire...Alors il est temps 
-de partager votre vie, vous avez désormais 30 coeurs, mais votre vie est commune.
-Votre entourage s'est cotisé pour faire des cadeaux aux mariés, 
-voici un livre protection IV et 5 pommes d'or qui devraient vous aider.
-Vous avez aussi désormais accès à la commande /collésérré.
-
 Le meilleur ami est donc /kill, puisqu'il n'a plus aucune chance de se mettre avec sa meilleure amie, vu qu'elle est en couple :
 *Votre meilleure amie est mariée, vous ne pourrez jamais la récupérer, vous décider donc d'en finir.*
 
