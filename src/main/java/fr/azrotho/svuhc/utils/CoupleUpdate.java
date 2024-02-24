@@ -77,8 +77,8 @@ public class CoupleUpdate {
             player1.sendMessage(SVUhc.getInstance().getTag() + "§fC'est le grand jour, vous êtes MARIÉS, 2 GOSSES, 1 LABRADOR ET UN SCÉNIC ROUGE avec §d§l"+ player2.getName() + "§f, Comme ont dit, après le mariage on partage tout, le meilleur comme le pire...Alors il est temps de partager votre vie, vous avez désormais 30 coeurs, mais votre vie est commune. Votre entourage s'est cotisé pour faire des cadeaux aux mariés, voici un livre protection IV et 5 pommes d'or qui devraient vous aider. Vous avez aussi désormais accès à la commande /colléserre.");
             player2.sendMessage(SVUhc.getInstance().getTag() + "§fC'est le grand jour, vous êtes MARIÉS, 2 GOSSES, 1 LABRADOR ET UN SCÉNIC ROUGE avec §d§l"+ player1.getName() + "§f, Comme ont dit, après le mariage on partage tout, le meilleur comme le pire...Alors il est temps de partager votre vie, vous avez désormais 30 coeurs, mais votre vie est commune. Votre entourage s'est cotisé pour faire des cadeaux aux mariés, voici un livre protection IV et 5 pommes d'or qui devraient vous aider. Vous avez aussi désormais accès à la commande /colléserre.");
 
-            player1.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(30);
-            player2.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(30);
+            player1.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(60);
+            player2.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(60);
 
             player1.getInventory().addItem(PluginsItemStackUtils.getProtectionBook());
             player2.getInventory().addItem(PluginsItemStackUtils.getProtectionBook());
