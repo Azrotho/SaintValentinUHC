@@ -283,6 +283,7 @@ public class SVPlayers {
 
     public Player getOtherPlayerInCouple(Player player) {
         for(SVCouple couple : couples) {
+            if(player == null) return null;
             if(couple.getPlayer1().getUuid().equals(player.getUniqueId())) {
                 return Bukkit.getPlayer(couple.getPlayer2().getUuid());
             } else if(couple.getPlayer2().getUuid().equals(player.getUniqueId())) {

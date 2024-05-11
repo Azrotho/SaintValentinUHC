@@ -64,12 +64,6 @@
           <version>1.20.1-R0.1-SNAPSHOT</version>
           <scope>provided</scope>
        </dependency>
-      <dependency>
-        <groupId>com.iridium</groupId>
-        <artifactId>IridiumColorAPI</artifactId>
-        <version>LATEST</version>
-        <scope>compile</scope>
-      </dependency>
     <dependency>
     <groupId>com.comphenix.protocol</groupId>
     <artifactId>ProtocolLib</artifactId>
